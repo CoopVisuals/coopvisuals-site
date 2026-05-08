@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Design &amp; Real Estate Media Fort Myers, FL | Coop Visuals</title>
+  <meta name="description" content="Fort Myers web design agency and real estate media company. Custom websites from $497, monthly management from $125/mo. Listing photography, drone video, and agent branding throughout Southwest Florida. FAA-licensed drone pilot. 5.0 ★ on Google.">
+  <meta name="keywords" content="web design fort myers, website design fort myers fl, real estate photography fort myers, real estate videography cape coral, drone photography fort myers, SEO fort myers, small business website southwest florida, real estate media swfl">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="US-FL">
+  <meta name="geo.placename" content="Fort Myers">
+  <link rel="canonical" href="https://www.coopvisuals.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Web Design &amp; Real Estate Media Fort Myers | Coop Visuals">
+  <meta property="og:description" content="Fort Myers agency: custom websites from $497 and real estate media that sells listings faster. FAA-licensed drone pilot. 5.0 ★ Google.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.coopvisuals.com/">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Web Design &amp; Real Estate Media Fort Myers | Coop Visuals">
+  <meta name="twitter:description" content="Fort Myers agency: custom websites from $497 and real estate media that sells listings faster. FAA-licensed drone pilot. 5.0 ★ Google.">
+
+  <!-- JSON-LD: LocalBusiness + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "name": "Coop Visuals",
+        "url": "https://www.coopvisuals.com",
+        "telephone": "(239) 849-6663",
+        "email": "michael@coopvisuals.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Fort Myers",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "areaServed": [
+          "Fort Myers","Cape Coral","Naples","Bonita Springs",
+          "Estero","Lehigh Acres","Fort Myers Beach","Sanibel"
+        ],
+        "description": "Fort Myers web design agency and real estate media company. Website design, SEO, and ongoing management for SWFL small businesses. Real estate photography, drone video, and agent branding.",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "13"
+        },
+        "sameAs": ["https://www.instagram.com/coopvisuals_"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Website Design Fort Myers",
+                "description": "Custom website design and monthly management for Southwest Florida small businesses. 5-page sites from $497, monthly plans from $125/mo."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Real Estate Photography Fort Myers",
+                "description": "MLS-ready listing photography, cinematic video tours, drone aerials, and agent branding for Fort Myers and Cape Coral real estate agents. 24–48hr turnaround."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does website design cost in Fort Myers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Coop Visuals offers custom website design in Fort Myers starting at $497 setup for a 5-page site, with monthly management plans from $125/mo. Growth plans start at $797 with SEO and Google Business Profile management included."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer real estate photography and video in Fort Myers and Cape Coral?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Coop Visuals provides listing photography, cinematic listing video tours, and FAA-licensed drone aerials throughout Fort Myers, Cape Coral, and all of Southwest Florida. Media is delivered in 24–48 hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What areas does Coop Visuals serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Coop Visuals is based in Fort Myers, FL and serves all of Southwest Florida including Cape Coral, Naples, Bonita Springs, Estero, Lehigh Acres, Fort Myers Beach, Sanibel, and surrounding areas."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sage-950: #1e2a16;
+      --sage-900: #2a3620;
+      --sage-800: #35432a;
+      --sage-700: #425534;
+      --sage-600: #4d623c;
+      --sage-500: #5a7044;
+      --sage-400: #7a9162;
+      --sage-300: #9aae84;
+      --cream-100: #f6f1ea;
+      --cream-200: #ece4d2;
+      --cream-300: #d8ccb4;
+      --cream-400: #c4b898;
+      --cream-500: #a89b7e;
+      --cream-600: #8c8066;
+      --blue-700: #0c447c;
+      --blue-500: #185fa5;
+      --blue-300: #7ab8f0;
+      --green-700: #27500a;
+      --green-500: #3b6d11;
+      --green-300: #9dca6e;
+      --gold: #c9a84c;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --r-sm: 8px; --r-md: 14px; --r-lg: 20px; --r-xl: 26px;
+      --shadow-card: 0 4px 28px rgba(0,0,0,0.22);
+      --shadow-lift: 0 14px 48px rgba(0,0,0,0.32);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--sage-900); color: var(--cream-200); overflow-x: hidden; line-height: 1.6; }
+
+    /* Scroll reveal */
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1); }
+    .reveal.in { opacity:1; transform:none; }
+    .stagger > * { opacity:0; transform:translateY(22px); transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1); }
+    .stagger.in > *:nth-child(1){opacity:1;transform:none;transition-delay:.04s}
+    .stagger.in > *:nth-child(2){opacity:1;transform:none;transition-delay:.13s}
+    .stagger.in > *:nth-child(3){opacity:1;transform:none;transition-delay:.22s}
+    .stagger.in > *:nth-child(4){opacity:1;transform:none;transition-delay:.31s}
+
+    /* NAV */
+    .nav { position:fixed; inset:0 0 auto 0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:18px 52px; transition:background .35s,box-shadow .35s,padding .35s; }
+    .nav.solid { background:rgba(30,42,22,.96); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); box-shadow:0 1px 0 rgba(255,255,255,.06),0 8px 32px rgba(0,0,0,.25); padding:14px 52px; }
+    .nav-brand { display:flex; align-items:center; text-decoration:none; flex-shrink:0; height:36px; }
+    .nav-brand img { height:100%; width:auto; display:block; }
+    .nav-links { display:flex; gap:30px; align-items:center; }
+    .nav-link { font-size:13.5px; color:var(--cream-400); text-decoration:none; transition:color .2s; }
+    .nav-link:hover { color:var(--cream-100); }
+    .nav-cta { font-size:13px; font-weight:500; padding:9px 22px; border-radius:100px; background:var(--cream-200); color:var(--sage-950); border:none; cursor:pointer; text-decoration:none; transition:background .2s,transform .18s,box-shadow .2s; white-space:nowrap; }
+    .nav-cta:hover { background:var(--cream-100); transform:translateY(-1px); box-shadow:0 4px 14px rgba(0,0,0,.3); }
+
+    /* HERO */
+    .hero { position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:130px 52px 90px; overflow:hidden; }
+    .hero-photo { position:absolute; inset:0; z-index:0; background-image:url('hero_listing.jpg'),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=75&auto=format'); background-size:cover; background-position:center 40%; filter:saturate(.35) brightness(.3); }
+    .hero-overlay { position:absolute; inset:0; z-index:1; background:linear-gradient(160deg,rgba(30,42,22,.88) 0%,rgba(42,54,32,.72) 55%,rgba(30,42,22,.92) 100%); }
+    #hero-canvas { position:absolute; inset:0; z-index:2; pointer-events:none; }
+    .hero-fade { position:absolute; bottom:0; left:0; right:0; height:180px; z-index:3; background:linear-gradient(to bottom,transparent,var(--sage-900)); }
+    .hero-content { position:relative; z-index:4; max-width:1080px; margin:0 auto; width:100%; }
+
+    .hero-eyebrow { display:inline-flex; align-items:center; gap:8px; font-size:11.5px; font-weight:500; color:var(--cream-400); text-transform:uppercase; letter-spacing:.11em; margin-bottom:26px; padding:6px 15px; border:1px solid rgba(255,255,255,.13); border-radius:100px; background:rgba(255,255,255,.05); backdrop-filter:blur(12px); }
+    .hero-eyebrow::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--gold); animation:dot-pulse 2.4s ease-in-out infinite; }
+    @keyframes dot-pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.65)} }
+
+    .hero-h1 { font-family:var(--font-serif); font-size:clamp(46px,7.5vw,100px); font-weight:500; line-height:1.06; color:var(--cream-100); letter-spacing:-.025em; margin-bottom:26px; }
+    .hero-h1 .line { overflow:hidden; display:block; }
+    .hero-h1 .line-inner { display:block; animation:line-up 1s cubic-bezier(.16,1,.3,1) both; }
+    .hero-h1 .line:nth-child(2) .line-inner { animation-delay:.2s; }
+    @keyframes line-up { from{transform:translateY(110%);opacity:0} to{transform:translateY(0);opacity:1} }
+
+    .hero-sub { font-size:17px; color:var(--cream-300); line-height:1.7; max-width:480px; margin-bottom:40px; animation:hero-fade-up .9s cubic-bezier(.16,1,.3,1) .42s both; }
+    @keyframes hero-fade-up { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+
+    /* Split cards */
+    .hero-split { display:grid; grid-template-columns:1fr 1fr; gap:14px; max-width:620px; margin-bottom:36px; animation:hero-fade-up .9s cubic-bezier(.16,1,.3,1) .58s both; }
+    .split-card { position:relative; border-radius:var(--r-xl); padding:24px; cursor:pointer; text-decoration:none; display:block; overflow:hidden; transform-style:preserve-3d; will-change:transform; transition:transform .4s cubic-bezier(.34,1.4,.64,1),box-shadow .35s; }
+    .split-card::before { content:''; position:absolute; inset:0; border-radius:inherit; opacity:0; transition:opacity .3s; }
+    .split-card:hover { box-shadow:var(--shadow-lift); }
+    .split-card:hover::before { opacity:1; }
+    .split-card.web { background:rgba(12,68,124,.18); border:1px solid rgba(24,95,165,.38); }
+    .split-card.web::before { background:linear-gradient(145deg,rgba(24,95,165,.22),rgba(12,68,124,.1)); }
+    .split-card.media { background:rgba(39,80,10,.2); border:1px solid rgba(59,109,17,.4); }
+    .split-card.media::before { background:linear-gradient(145deg,rgba(59,109,17,.22),rgba(39,80,10,.1)); }
+    .split-card::after { content:''; position:absolute; top:-100%; left:-60%; width:40%; height:300%; background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.06) 50%,transparent 60%); transition:left .55s ease; pointer-events:none; }
+    .split-card:hover::after { left:140%; }
+    .split-icon { width:40px; height:40px; border-radius:var(--r-sm); display:flex; align-items:center; justify-content:center; margin-bottom:12px; }
+    .web .split-icon  { background:rgba(122,184,240,.12); }
+    .media .split-icon { background:rgba(157,202,110,.12); }
+    .split-title { font-size:15px; font-weight:600; color:var(--cream-100); margin-bottom:6px; }
+    .split-sub { font-size:12.5px; color:var(--cream-400); line-height:1.6; margin-bottom:14px; }
+    .split-btn { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:500; padding:6px 14px; border-radius:100px; border:none; cursor:pointer; transition:gap .25s,background .2s; font-family:var(--font-sans); }
+    .split-btn::after { content:'→'; transition:transform .25s; }
+    .split-card:hover .split-btn::after { transform:translateX(3px); }
+    .web  .split-btn { background:rgba(122,184,240,.15); color:var(--blue-300); }
+    .media .split-btn { background:rgba(157,202,110,.15); color:var(--green-300); }
+
+    .hero-meta { display:flex; gap:22px; flex-wrap:wrap; animation:hero-fade-up .9s cubic-bezier(.16,1,.3,1) .72s both; }
+    .hero-meta-item { font-size:12px; color:var(--cream-500); display:flex; align-items:center; gap:5px; }
+    .hero-meta-item svg { width:13px; height:13px; flex-shrink:0; }
+
+    /* TRUST BAR */
+    .trust-strip { background:rgba(255,255,255,.025); border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06); }
+    .trust-inner { max-width:1080px; margin:0 auto; padding:0 52px; display:grid; grid-template-columns:repeat(4,1fr); }
+    .trust-item { padding:30px 20px; text-align:center; border-right:1px solid rgba(255,255,255,.06); }
+    .trust-item:last-child { border-right:none; }
+    .trust-n { font-family:var(--font-serif); font-size:38px; font-weight:500; color:var(--cream-100); line-height:1; margin-bottom:5px; }
+    .trust-l { font-size:12px; color:var(--cream-500); }
+
+    /* LAYOUT */
+    .wrap { max-width:1080px; margin:0 auto; padding:80px 52px; }
+    .divider { border:none; border-top:1px solid rgba(255,255,255,.06); margin:0 52px; }
+    .sec-label { font-size:11px; font-weight:600; color:var(--cream-500); text-transform:uppercase; letter-spacing:.1em; margin-bottom:14px; display:flex; align-items:center; gap:10px; }
+    .sec-label::after { content:''; flex:1; height:1px; background:rgba(255,255,255,.07); }
+    .sec-title { font-family:var(--font-serif); font-size:clamp(26px,3.2vw,40px); font-weight:500; color:var(--cream-100); line-height:1.2; letter-spacing:-.02em; margin-bottom:8px; }
+    .sec-sub { font-size:14.5px; color:var(--cream-400); margin-bottom:44px; max-width:500px; line-height:1.65; }
+
+    /* SERVICES */
+    .services-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .svc-card { background:rgba(255,255,255,.028); border:1px solid rgba(255,255,255,.08); border-radius:var(--r-xl); padding:28px; position:relative; overflow:hidden; transition:background .28s,border-color .28s,transform .35s cubic-bezier(.34,1.4,.64,1),box-shadow .3s; }
+    .svc-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; opacity:0; transition:opacity .3s; }
+    .svc-card.web::before  { background:linear-gradient(90deg,var(--blue-500),transparent 70%); }
+    .svc-card.media::before { background:linear-gradient(90deg,var(--green-500),transparent 70%); }
+    .svc-card:hover { background:rgba(255,255,255,.052); border-color:rgba(255,255,255,.14); transform:translateY(-5px); box-shadow:var(--shadow-card); }
+    .svc-card:hover::before { opacity:1; }
+    .svc-tag { font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; padding:3px 10px; border-radius:100px; display:inline-block; margin-bottom:12px; }
+    .svc-tag.web   { background:rgba(24,95,165,.18); color:var(--blue-300); border:1px solid rgba(24,95,165,.3); }
+    .svc-tag.media { background:rgba(59,109,17,.18); color:var(--green-300); border:1px solid rgba(59,109,17,.3); }
+    .svc-title { font-size:16px; font-weight:600; color:var(--cream-100); margin-bottom:6px; }
+    .svc-desc { font-size:13px; color:var(--cream-400); line-height:1.6; margin-bottom:14px; }
+    .svc-features { list-style:none; }
+    .svc-features li { font-size:13px; color:var(--cream-400); padding:3px 0; display:flex; align-items:center; gap:8px; }
+    .svc-features li::before { content:''; width:4px; height:4px; border-radius:50%; background:var(--cream-600); flex-shrink:0; }
+
+    /* PORTFOLIO */
+    .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .port-card { background:rgba(255,255,255,.028); border:1px solid rgba(255,255,255,.08); border-radius:var(--r-xl); padding:24px; perspective:700px; transform-style:preserve-3d; transition:transform .4s cubic-bezier(.34,1.4,.64,1),box-shadow .35s,background .28s; }
+    .port-card:hover { transform:translateY(-7px) rotateX(3deg); box-shadow:var(--shadow-lift); background:rgba(255,255,255,.05); }
+    .port-industry { font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--cream-500); margin-bottom:10px; }
+    .port-stat { font-family:var(--font-serif); font-size:42px; font-weight:500; color:var(--cream-100); margin-bottom:4px; line-height:1; }
+    .port-desc { font-size:12.5px; color:var(--cream-400); line-height:1.45; margin-bottom:14px; }
+    .port-trend { height:38px; display:flex; align-items:flex-end; gap:3px; margin:10px 0 6px; }
+    .bar { border-radius:3px 3px 0 0; flex:1; transform:scaleY(0); transform-origin:bottom; transition:transform .55s cubic-bezier(.34,1.4,.64,1); }
+    .port-card.in .bar:nth-child(1){transform:scaleY(1);transition-delay:.05s}
+    .port-card.in .bar:nth-child(2){transform:scaleY(1);transition-delay:.10s}
+    .port-card.in .bar:nth-child(3){transform:scaleY(1);transition-delay:.15s}
+    .port-card.in .bar:nth-child(4){transform:scaleY(1);transition-delay:.20s}
+    .port-card.in .bar:nth-child(5){transform:scaleY(1);transition-delay:.25s}
+    .port-card.in .bar:nth-child(6){transform:scaleY(1);transition-delay:.30s}
+    .port-card.in .bar:nth-child(7){transform:scaleY(1);transition-delay:.35s}
+    .port-card.in .bar:nth-child(8){transform:scaleY(1);transition-delay:.40s}
+    .port-note { font-size:10px; color:var(--cream-600); }
+    .port-play { height:38px; margin:10px 0 6px; background:rgba(255,255,255,.06); border-radius:var(--r-sm); display:flex; align-items:center; justify-content:center; transition:background .22s; }
+    .port-card:hover .port-play { background:rgba(255,255,255,.11); }
+
+    /* PRICING */
+    .pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .price-card { background:rgba(255,255,255,.028); border:1px solid rgba(255,255,255,.08); border-radius:var(--r-xl); padding:28px; transition:transform .35s cubic-bezier(.34,1.4,.64,1),box-shadow .3s,background .28s; }
+    .price-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-card); background:rgba(255,255,255,.05); }
+    .price-card.featured { border:1.5px solid rgba(24,95,165,.48); background:rgba(24,95,165,.09); position:relative; }
+    .price-card.featured::before { content:''; position:absolute; top:0; left:22px; right:22px; height:2px; background:linear-gradient(90deg,transparent,var(--blue-500) 40%,var(--blue-500) 60%,transparent); border-radius:0 0 3px 3px; }
+    .price-badge { font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; padding:3px 10px; border-radius:100px; background:rgba(24,95,165,.22); color:var(--blue-300); border:1px solid rgba(24,95,165,.32); display:inline-block; margin-bottom:12px; }
+    .price-name { font-size:15px; font-weight:600; color:var(--cream-100); margin-bottom:3px; }
+    .price-setup { font-size:12px; color:var(--cream-500); margin-bottom:10px; }
+    .price-mo { font-family:var(--font-serif); font-size:38px; font-weight:500; color:var(--cream-100); line-height:1; margin-bottom:18px; }
+    .price-mo span { font-family:var(--font-sans); font-size:13px; font-weight:400; color:var(--cream-500); }
+    .price-features { list-style:none; }
+    .price-features li { font-size:12.5px; color:var(--cream-400); padding:4px 0; display:flex; align-items:center; gap:8px; }
+    .price-features li::before { content:''; width:4px; height:4px; border-radius:50%; background:var(--blue-500); flex-shrink:0; }
+
+    /* BLOG */
+    .blog-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .blog-card { background:rgba(255,255,255,.028); border:1px solid rgba(255,255,255,.08); border-radius:var(--r-xl); padding:24px; text-decoration:none; display:block; transition:background .28s,border-color .28s,transform .35s cubic-bezier(.34,1.4,.64,1); }
+    .blog-card:hover { background:rgba(255,255,255,.052); border-color:rgba(255,255,255,.14); transform:translateY(-4px); }
+    .blog-cat { font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; padding:3px 10px; border-radius:100px; display:inline-block; margin-bottom:10px; }
+    .blog-cat.web   { background:rgba(24,95,165,.18); color:var(--blue-300); border:1px solid rgba(24,95,165,.28); }
+    .blog-cat.media { background:rgba(59,109,17,.18); color:var(--green-300); border:1px solid rgba(59,109,17,.28); }
+    .blog-cat.both  { background:rgba(255,255,255,.07); color:var(--cream-400); border:1px solid rgba(255,255,255,.1); }
+    .blog-title { font-size:14px; font-weight:500; color:var(--cream-200); line-height:1.42; margin-bottom:8px; }
+    .blog-date { font-size:11px; color:var(--cream-600); }
+
+    /* CTA */
+    .cta-wrap { background:linear-gradient(135deg,rgba(12,68,124,.12) 0%,rgba(39,80,10,.12) 100%); border:1px solid rgba(255,255,255,.08); border-radius:var(--r-xl); padding:44px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; position:relative; overflow:hidden; }
+    .cta-wrap::before,.cta-wrap::after { content:''; position:absolute; border-radius:50%; pointer-events:none; width:340px; height:340px; top:-120px; }
+    .cta-wrap::before { left:-80px; background:radial-gradient(circle,rgba(24,95,165,.07),transparent 65%); }
+    .cta-wrap::after  { right:-80px; background:radial-gradient(circle,rgba(59,109,17,.07),transparent 65%); }
+    .cta-text { font-family:var(--font-serif); font-size:26px; font-weight:500; color:var(--cream-100); margin-bottom:4px; position:relative; z-index:1; }
+    .cta-sub { font-size:14px; color:var(--cream-400); position:relative; z-index:1; }
+    .cta-btns { display:flex; gap:12px; flex-wrap:wrap; position:relative; z-index:1; }
+    .btn-web { font-size:13px; font-weight:500; padding:11px 22px; border-radius:100px; background:rgba(24,95,165,.22); color:var(--blue-300); border:1px solid rgba(24,95,165,.38); cursor:pointer; text-decoration:none; transition:background .2s,transform .2s; font-family:var(--font-sans); }
+    .btn-web:hover { background:rgba(24,95,165,.38); transform:translateY(-2px); }
+    .btn-media { font-size:13px; font-weight:500; padding:11px 22px; border-radius:100px; background:rgba(59,109,17,.22); color:var(--green-300); border:1px solid rgba(59,109,17,.38); cursor:pointer; text-decoration:none; transition:background .2s,transform .2s; font-family:var(--font-sans); }
+    .btn-media:hover { background:rgba(59,109,17,.38); transform:translateY(-2px); }
+
+    /* FOOTER */
+    .footer { max-width:1080px; margin:0 auto; padding:32px 52px; border-top:1px solid rgba(255,255,255,.07); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+    .footer-brand { font-size:14px; font-weight:500; color:var(--cream-300); }
+    .footer-links { display:flex; gap:18px; flex-wrap:wrap; }
+    .footer-link { font-size:12px; color:var(--cream-600); text-decoration:none; transition:color .2s; }
+    .footer-link:hover { color:var(--cream-300); }
+    .footer-copy { font-size:12px; color:var(--cream-600); }
+
+    /* RESPONSIVE */
+    @media (max-width:900px) {
+      .nav,.nav.solid { padding:14px 24px; }
+      .nav-links { display:none; }
+      .hero { padding:110px 24px 70px; }
+      .hero-split { grid-template-columns:1fr; max-width:100%; }
+      .wrap { padding:60px 24px; }
+      .trust-inner { grid-template-columns:repeat(2,1fr); padding:0 24px; }
+      .trust-item:nth-child(2) { border-right:none; }
+      .trust-item:nth-child(3),.trust-item:nth-child(4) { border-top:1px solid rgba(255,255,255,.06); }
+      .services-grid,.portfolio-grid,.pricing-grid,.blog-grid { grid-template-columns:1fr; }
+      .cta-wrap { padding:28px; flex-direction:column; align-items:flex-start; }
+      .footer { padding:28px 24px; flex-direction:column; align-items:flex-start; }
+      .divider { margin:0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <a href="/" class="nav-brand" aria-label="Coop Visuals — home">
+    <img src="logo.png" alt="Coop Visuals">
+  </a>
+  <div class="nav-links" role="menubar">
+    <a href="/web-design.html" class="nav-link" role="menuitem">Web design</a>
+    <a href="/real-estate-media" class="nav-link" role="menuitem">Real estate media</a>
+    <a href="/work" class="nav-link" role="menuitem">Our work</a>
+    <a href="/blog" class="nav-link" role="menuitem">Blog</a>
+  </div>
+  <a href="#contact" class="nav-cta">Get started</a>
+</nav>
+
+<section class="hero" aria-label="Hero">
+  <div class="hero-photo" role="presentation" aria-hidden="true"></div>
+  <div class="hero-overlay" role="presentation" aria-hidden="true"></div>
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-fade" role="presentation" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Fort Myers, FL · Serving all of Southwest Florida</div>
+    <h1 class="hero-h1">
+      <span class="line"><span class="line-inner">We build websites.</span></span>
+      <span class="line"><span class="line-inner">We shoot real estate media.</span></span>
+    </h1>
+    <p class="hero-sub">Coop Visuals is a Fort Myers agency helping local businesses grow online and helping real estate agents sell listings faster. Two services. One team.</p>
+    <div class="hero-split">
+      <a href="/web-design.html" class="split-card web">
+        <div class="split-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7ab8f0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="split-title">We build websites</div>
+        <p class="split-sub">Custom website design, SEO, and ongoing management for SWFL small businesses. Monthly plans from $125/mo.</p>
+        <span class="split-btn">See web design services</span>
+      </a>
+      <a href="/real-estate-media" class="split-card media">
+        <div class="split-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9dca6e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        </div>
+        <div class="split-title">We shoot real estate media</div>
+        <p class="split-sub">Listing photography, cinematic video, drone aerials, and agent branding throughout Fort Myers and Cape Coral.</p>
+        <span class="split-btn">See media services</span>
+      </a>
+    </div>
+    <div class="hero-meta">
+      <span class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Fort Myers, FL
+      </span>
+      <span class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        5.0 · 13 Google reviews
+      </span>
+      <span class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        FAA-licensed drone pilot
+      </span>
+      <span class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        24–48hr media turnaround
+      </span>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip" role="region" aria-label="At a glance">
+  <div class="trust-inner stagger" id="trust-bar">
+    <div class="trust-item"><div class="trust-n" data-count="4">0</div><div class="trust-l">Years building SWFL websites</div></div>
+    <div class="trust-item"><div class="trust-n" data-count="15" data-suffix="+">0+</div><div class="trust-l">Sites designed &amp; managed</div></div>
+    <div class="trust-item"><div class="trust-n">5.0</div><div class="trust-l">Average Google rating</div></div>
+    <div class="trust-item"><div class="trust-n">FAA</div><div class="trust-l">Licensed drone pilot</div></div>
+  </div>
+</div>
+
+<section aria-label="Services" class="wrap">
+  <div class="sec-label reveal">Services</div>
+  <h2 class="sec-title reveal">Two divisions. One trusted team.</h2>
+  <p class="sec-sub reveal">Everything your Fort Myers business needs to win online — whether that's a new website or listing media that sells faster.</p>
+  <div class="services-grid stagger">
+    <div class="svc-card web">
+      <span class="svc-tag web">Web design</span>
+      <div class="svc-title">Website design &amp; management</div>
+      <p class="svc-desc">Custom Duda websites built fast, managed monthly for Southwest Florida small businesses. No long-term contracts.</p>
+      <ul class="svc-features"><li>5-page site from $497 setup</li><li>Monthly plans from $125/mo</li><li>SEO optimization included</li><li>Forms, analytics, SSL</li></ul>
+    </div>
+    <div class="svc-card web">
+      <span class="svc-tag web">Web design</span>
+      <div class="svc-title">Local SEO &amp; visibility</div>
+      <p class="svc-desc">Get found on Google and in AI search results for your Fort Myers service area.</p>
+      <ul class="svc-features"><li>Google Business Profile setup</li><li>Local keyword targeting</li><li>Monthly rank reporting</li><li>AEO content optimization</li></ul>
+    </div>
+    <div class="svc-card media">
+      <span class="svc-tag media">Real estate media</span>
+      <div class="svc-title">Listing photography &amp; video</div>
+      <p class="svc-desc">MLS-ready photos and cinematic listing videos for Fort Myers and Cape Coral agents, delivered in 24–48 hours.</p>
+      <ul class="svc-features"><li>Interior &amp; exterior photography</li><li>Cinematic listing video tours</li><li>Twilight &amp; golden hour shots</li><li>24–48hr delivery</li></ul>
+    </div>
+    <div class="svc-card media">
+      <span class="svc-tag media">Real estate media</span>
+      <div class="svc-title">Drone &amp; agent branding</div>
+      <p class="svc-desc">FAA-licensed aerial photography and personal brand content for Southwest Florida real estate agents.</p>
+      <ul class="svc-features"><li>Drone aerial photo &amp; video</li><li>Agent headshots &amp; reels</li><li>Social media content</li><li>Waterfront &amp; luxury specialty</li></ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section aria-label="Our work" class="wrap">
+  <div class="sec-label reveal">Our work</div>
+  <h2 class="sec-title reveal">Results that speak for themselves.</h2>
+  <p class="sec-sub reveal">Real numbers from real Southwest Florida clients.</p>
+  <div class="portfolio-grid stagger">
+    <div class="port-card">
+      <div class="port-industry">Roofing · Web design · Fort Myers</div>
+      <div class="port-stat">+340%</div>
+      <p class="port-desc">Organic traffic growth in 12 months</p>
+      <div class="port-trend" aria-hidden="true">
+        <div class="bar" style="height:20%;background:#2a3620"></div>
+        <div class="bar" style="height:25%;background:#354429"></div>
+        <div class="bar" style="height:32%;background:#425534"></div>
+        <div class="bar" style="height:42%;background:#5a7044"></div>
+        <div class="bar" style="height:54%;background:#7a9162"></div>
+        <div class="bar" style="height:68%;background:#97c459"></div>
+        <div class="bar" style="height:84%;background:#5ba020"></div>
+        <div class="bar" style="height:100%;background:#3b6d11"></div>
+      </div>
+      <div class="port-note">GSC impressions · 12-month window</div>
+    </div>
+    <div class="port-card">
+      <div class="port-industry">Title insurance · Web design · SWFL</div>
+      <div class="port-stat">+120%</div>
+      <p class="port-desc">Search impressions growth, H2 2025</p>
+      <div class="port-trend" aria-hidden="true">
+        <div class="bar" style="height:35%;background:#1e2e40"></div>
+        <div class="bar" style="height:42%;background:#263850"></div>
+        <div class="bar" style="height:50%;background:#2f4a6a"></div>
+        <div class="bar" style="height:60%;background:#3d6080"></div>
+        <div class="bar" style="height:72%;background:#5588b0"></div>
+        <div class="bar" style="height:82%;background:#7ab8f0"></div>
+        <div class="bar" style="height:92%;background:#378add"></div>
+        <div class="bar" style="height:100%;background:#185fa5"></div>
+      </div>
+      <div class="port-note">GSC impressions · 12-month window</div>
+    </div>
+    <div class="port-card">
+      <div class="port-industry">Luxury real estate · Media · Fort Myers</div>
+      <div class="port-stat">Sold</div>
+      <p class="port-desc">In 6 days after cinematic listing video</p>
+      <div class="port-play" aria-label="Listing video preview">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="rgba(255,255,255,.45)" aria-hidden="true"><path d="M5 3l14 9-14 9V3z"/></svg>
+      </div>
+      <div class="port-note">Cinematic listing video · Fort Myers waterfront</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section aria-label="Pricing" class="wrap">
+  <div class="sec-label reveal">Pricing</div>
+  <h2 class="sec-title reveal">Transparent website plans for Fort Myers businesses.</h2>
+  <p class="sec-sub reveal">No hidden fees. No long-term contracts. Real estate media pricing on the services page.</p>
+  <div class="pricing-grid stagger">
+    <div class="price-card">
+      <div class="price-name">Starter</div>
+      <div class="price-setup">$497 setup · 5 pages</div>
+      <div class="price-mo">$125<span>/mo</span></div>
+      <ul class="price-features"><li>Custom design</li><li>SSL + hosting</li><li>1hr edits/month</li><li>Analytics reporting</li><li>Forms + contact</li></ul>
+    </div>
+    <div class="price-card featured">
+      <div class="price-badge">Most popular</div>
+      <div class="price-name">Growth</div>
+      <div class="price-setup">$797 setup · 8–10 pages</div>
+      <div class="price-mo">$175<span>/mo</span></div>
+      <ul class="price-features"><li>Everything in Starter</li><li>Blog setup</li><li>SEO optimization</li><li>GBP management</li><li>Quarterly review call</li></ul>
+    </div>
+    <div class="price-card">
+      <div class="price-name">Premium</div>
+      <div class="price-setup">$1,200 setup · 10+ pages</div>
+      <div class="price-mo">$250<span>/mo</span></div>
+      <ul class="price-features"><li>Everything in Growth</li><li>1 blog post/month</li><li>Rank tracking</li><li>Monthly strategy call</li><li>Priority edits</li></ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section aria-label="Blog" class="wrap">
+  <div class="sec-label reveal">Blog</div>
+  <h2 class="sec-title reveal">Local expertise, in writing.</h2>
+  <p class="sec-sub reveal">Practical guides for Southwest Florida business owners and real estate agents.</p>
+  <div class="blog-grid stagger">
+    <a href="/blog/web-design-fort-myers-cost" class="blog-card">
+      <span class="blog-cat web">Web design</span>
+      <div class="blog-title">How much does a website cost in Fort Myers? A transparent breakdown</div>
+      <div class="blog-date">Fort Myers web design · Cost guide</div>
+    </a>
+    <a href="/blog/real-estate-video-fort-myers" class="blog-card">
+      <span class="blog-cat media">Real estate media</span>
+      <div class="blog-title">Why Fort Myers real estate agents need professional video in 2026</div>
+      <div class="blog-date">Real estate video · Fort Myers agents</div>
+    </a>
+    <a href="/blog/website-platform-comparison-swfl" class="blog-card">
+      <span class="blog-cat both">Both divisions</span>
+      <div class="blog-title">Duda vs Framer vs Squarespace: best website platform for SWFL businesses</div>
+      <div class="blog-date">Website platforms · Southwest Florida</div>
+    </a>
+    <a href="/blog/aeo-fort-myers-business" class="blog-card">
+      <span class="blog-cat web">Web design</span>
+      <div class="blog-title">What is AEO and why does your Fort Myers business need it in 2026</div>
+      <div class="blog-date">AEO · AI search optimization · Fort Myers</div>
+    </a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<div class="wrap" id="contact">
+  <div class="cta-wrap reveal">
+    <div>
+      <div class="cta-text">Ready to get started?</div>
+      <div class="cta-sub">Pick your path — we handle the rest.</div>
+    </div>
+    <div class="cta-btns">
+      <a href="/web-design.html" class="btn-web">I need a website</a>
+      <a href="/real-estate-media" class="btn-media">I need real estate media</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-brand">Coop Visuals · Fort Myers, FL</div>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="/web-design.html" class="footer-link">Web design</a>
+    <a href="/real-estate-media" class="footer-link">Real estate media</a>
+    <a href="/work" class="footer-link">Our work</a>
+    <a href="/about" class="footer-link">About</a>
+    <a href="/blog" class="footer-link">Blog</a>
+    <a href="mailto:michael@coopvisuals.com" class="footer-link">Contact</a>
+  </nav>
+  <div class="footer-copy">© 2026 Coop Visuals</div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 60), { passive: true });
+
+// Intersection observer
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.14, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal, .stagger, .port-card').forEach(el => io.observe(el));
+
+// Count-up
+function countUp(el) {
+  const target = +el.dataset.count, suffix = el.dataset.suffix || '', dur = 1100;
+  let start = null;
+  requestAnimationFrame(function step(ts) {
+    if (!start) start = ts;
+    const p = Math.min((ts - start) / dur, 1), ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.floor(ease * target) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+  });
+}
+new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('[data-count]').forEach(countUp); } });
+}, { threshold: 0.5 }).observe(document.getElementById('trust-bar'));
+
+// 3D tilt on split cards
+document.querySelectorAll('.split-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width  - 0.5) * 14;
+    const y = ((e.clientY - r.top)  / r.height - 0.5) * -10;
+    card.style.transform = `perspective(700px) rotateY(${x}deg) rotateX(${y}deg) translateY(-6px) scale(1.02)`;
+  });
+  card.addEventListener('mouseleave', () => card.style.transform = '');
+});
+
+// Three.js hero
+(function() {
+  if (typeof THREE === 'undefined') return;
+  const canvas = document.getElementById('hero-canvas');
+  const hero = canvas.parentElement;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 120);
+  camera.position.z = 6;
+  function resize() {
+    const w = hero.clientWidth, h = hero.clientHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  resize();
+  const mats = [
+    new THREE.MeshBasicMaterial({ color: 0x6a9b50, wireframe: true, transparent: true, opacity: 0.14 }),
+    new THREE.MeshBasicMaterial({ color: 0x4a7fa8, wireframe: true, transparent: true, opacity: 0.12 }),
+    new THREE.MeshBasicMaterial({ color: 0x8ab865, wireframe: true, transparent: true, opacity: 0.10 }),
+  ];
+  const geos = [
+    new THREE.IcosahedronGeometry(0.55, 0),
+    new THREE.OctahedronGeometry(0.48, 0),
+    new THREE.TetrahedronGeometry(0.45, 0),
+    new THREE.IcosahedronGeometry(0.38, 0),
+    new THREE.OctahedronGeometry(0.58, 0),
+  ];
+  const shapes = [];
+  for (let i = 0; i < 14; i++) {
+    const mesh = new THREE.Mesh(geos[i % geos.length], mats[i % mats.length].clone());
+    mesh.position.set((Math.random()-.5)*18, (Math.random()-.5)*10, (Math.random()-.5)*6-1);
+    mesh.rotation.set(Math.random()*Math.PI*2, Math.random()*Math.PI*2, Math.random()*Math.PI*2);
+    mesh.userData = { rx:(Math.random()-.5)*.007, ry:(Math.random()-.5)*.009, spd:Math.random()*.0005+.0002, off:Math.random()*Math.PI*2, baseY:mesh.position.y };
+    scene.add(mesh); shapes.push(mesh);
+  }
+  const N = 160, pos = new Float32Array(N * 3);
+  for (let i = 0; i < N * 3; i++) pos[i] = (Math.random()-.5)*22;
+  const pGeo = new THREE.BufferGeometry();
+  pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  scene.add(new THREE.Points(pGeo, new THREE.PointsMaterial({ color: 0x8ab865, size: 0.028, transparent: true, opacity: 0.35 })));
+  let mx = 0, my = 0;
+  window.addEventListener('mousemove', e => { mx=(e.clientX/innerWidth-.5)*.7; my=(e.clientY/innerHeight-.5)*.4; }, { passive: true });
+  let t = 0;
+  (function frame() {
+    requestAnimationFrame(frame); t += 0.016;
+    shapes.forEach(m => { m.rotation.x+=m.userData.rx; m.rotation.y+=m.userData.ry; m.position.y=m.userData.baseY+Math.sin(t*m.userData.spd*60+m.userData.off)*.4; });
+    camera.position.x += (mx - camera.position.x) * 0.025;
+    camera.position.y += (-my - camera.position.y) * 0.025;
+    renderer.render(scene, camera);
+  })();
+  window.addEventListener('resize', resize, { passive: true });
+})();
+</script>
+</body>
+</html>
