@@ -15,8 +15,8 @@
 <link rel="icon" href="/images/Logo_tan.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Sora:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Sora:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0200395WFP"></script>
 <script>
@@ -105,7 +105,7 @@
     --text-light: #8C8C7E;
     --border: rgba(74,122,85,0.15);
     --border-strong: rgba(74,122,85,0.3);
-    --font-display: 'Playfair Display', Georgia, serif;
+    --font-display: 'Corben', Georgia, serif;
     --font-body: 'Sora', system-ui, sans-serif;
     --radius: 6px;
     --radius-lg: 12px;
@@ -148,7 +148,7 @@
   .page-hero { background: var(--green); padding: 72px 24px 80px; }
   .page-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
   .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,223,168,0.15); color: var(--cream); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 14px; border-radius: var(--radius-pill); margin-bottom: 20px; border: 1px solid rgba(245,223,168,0.2); }
-  .page-h1 { font-family: var(--font-display); font-size: clamp(36px, 4.5vw, 58px); font-weight: 900; color: var(--cream); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 20px; }
+  .page-h1 { font-family: var(--font-display); font-size: clamp(36px, 4.5vw, 58px); font-weight: 700; color: var(--cream); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 20px; }
   .page-sub { font-size: 16px; color: rgba(245,223,168,0.75); line-height: 1.7; font-weight: 300; margin-bottom: 32px; }
   .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--cream); color: var(--green-dark); font-size: 14px; font-weight: 600; padding: 12px 24px; border-radius: var(--radius-pill); border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; }
@@ -158,7 +158,7 @@
 
   .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(245,223,168,0.1); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(245,223,168,0.15); }
   .hero-stat { padding: 22px 18px; text-align: center; background: rgba(245,223,168,0.05); }
-  .hero-stat-n { font-family: var(--font-display); font-size: 34px; font-weight: 900; color: var(--cream); line-height: 1; margin-bottom: 4px; }
+  .hero-stat-n { font-family: var(--font-display); font-size: 34px; font-weight: 700; color: var(--cream); line-height: 1; margin-bottom: 4px; }
   .hero-stat-l { font-size: 12px; color: rgba(245,223,168,0.55); line-height: 1.3; }
   .hero-meta-list { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
   .hero-meta-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(245,223,168,0.65); }
@@ -167,14 +167,14 @@
   section { padding: 80px 24px; }
   .section-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-bottom: 14px; }
   .section-eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--green); border-radius: 2px; }
-  .section-h2 { font-family: var(--font-display); font-size: clamp(26px, 3vw, 40px); font-weight: 900; color: var(--text); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 14px; }
+  .section-h2 { font-family: var(--font-display); font-size: clamp(26px, 3vw, 40px); font-weight: 700; color: var(--text); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 14px; }
   .section-sub { font-size: 16px; color: var(--text-muted); line-height: 1.7; max-width: 560px; font-weight: 300; }
 
   .process-section { background: var(--white); }
   .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 52px; }
   .process-step { background: var(--white); padding: 32px 24px; transition: background 0.2s; }
   .process-step:hover { background: var(--green-pale); }
-  .process-num { font-family: var(--font-display); font-size: 48px; font-weight: 900; color: var(--border-strong); line-height: 1; margin-bottom: 16px; }
+  .process-num { font-family: var(--font-display); font-size: 48px; font-weight: 700; color: var(--border-strong); line-height: 1; margin-bottom: 16px; }
   .process-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
   .process-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; font-weight: 300; }
 
@@ -210,7 +210,7 @@
   .price-card.featured .price-name { color: var(--green-dark); }
   .price-setup { font-size: 12px; color: rgba(245,223,168,0.5); margin-bottom: 16px; }
   .price-card.featured .price-setup { color: var(--text-muted); }
-  .price-amount { font-family: var(--font-display); font-size: 44px; font-weight: 900; color: var(--cream); line-height: 1; }
+  .price-amount { font-family: var(--font-display); font-size: 44px; font-weight: 700; color: var(--cream); line-height: 1; }
   .price-card.featured .price-amount { color: var(--green-dark); }
   .price-period { font-size: 13px; color: rgba(245,223,168,0.5); margin-bottom: 20px; }
   .price-card.featured .price-period { color: var(--text-muted); }
@@ -250,7 +250,7 @@
 
   .cta-section { background: var(--cream-light); padding: 80px 24px; }
   .cta-inner { max-width: 680px; margin: 0 auto; text-align: center; }
-  .cta-h2 { font-family: var(--font-display); font-size: clamp(28px, 3.5vw, 44px); font-weight: 900; color: var(--text); letter-spacing: -0.02em; margin-bottom: 16px; line-height: 1.15; }
+  .cta-h2 { font-family: var(--font-display); font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; color: var(--text); letter-spacing: -0.02em; margin-bottom: 16px; line-height: 1.15; }
   .cta-sub { font-size: 16px; color: var(--text-muted); line-height: 1.7; font-weight: 300; margin-bottom: 32px; }
   .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .cta-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: var(--cream); font-size: 14px; font-weight: 600; padding: 13px 28px; border-radius: var(--radius-pill); border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; }
