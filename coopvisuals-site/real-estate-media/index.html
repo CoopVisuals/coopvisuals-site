@@ -17,8 +17,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Sora:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 <noscript><link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+<!-- Google tag (gtag.js) — Consent Mode v2 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0200395WFP"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0200395WFP');</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { analytics_storage: 'denied' });
+  gtag('js', new Date());
+  gtag('config', 'G-0200395WFP');
+  if (localStorage.getItem('cv_consent') === 'accepted') {
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+  }
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Real Estate Photography & Video Production","provider":{"@type":"LocalBusiness","name":"Coop Visuals","url":"https://www.coopvisuals.com","telephone":"(239) 849-6663","address":{"@type":"PostalAddress","addressLocality":"Fort Myers","addressRegion":"FL","addressCountry":"US"}},"areaServed":["Fort Myers","Cape Coral","Naples","Bonita Springs","Estero","Southwest Florida"],"description":"Professional real estate listing photography, cinematic video production, and FAA-licensed drone aerial photography throughout Southwest Florida."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How quickly do you deliver real estate photos in Fort Myers?","acceptedAnswer":{"@type":"Answer","text":"Listing photos are delivered in less than 24 hours. Cinematic video and edited reels are typically delivered in 3–5 days. Rush delivery is available for time-sensitive listings."}},{"@type":"Question","name":"Are you FAA licensed for drone photography in Fort Myers?","acceptedAnswer":{"@type":"Answer","text":"Yes. Coop Visuals holds an FAA Part 107 Remote Pilot Certificate, required for all commercial drone operations. We are fully insured and compliant for all real estate drone work in Fort Myers, Cape Coral, and Southwest Florida."}},{"@type":"Question","name":"How do I book a real estate shoot?","acceptedAnswer":{"@type":"Answer","text":"You can book listing photography, video, and drone services directly at listings.coopvisuals.com. Select your package, choose your date, and we handle the rest."}}]}]}
 </script>
@@ -159,7 +169,7 @@
     <div class="trust-item"><div class="trust-n">&lt;24hr</div><div class="trust-l">Photo delivery</div></div>
     <div class="trust-item"><div class="trust-n">FAA</div><div class="trust-l">Licensed drone pilot</div></div>
     <div class="trust-item"><div class="trust-n">5.0★</div><div class="trust-l">Google rating</div></div>
-    <div class="trust-item"><div class="trust-n">SWFL</div><div class="trust-l">Fort Myers & Cape Coral</div></div>
+    <div class="trust-item"><div class="trust-n">6+ yrs</div><div class="trust-l">Real estate media</div></div>
   </div>
 </div>
 
@@ -329,6 +339,31 @@ document.querySelectorAll('.faq-q').forEach(btn => {
     if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
   });
 });
+</script>
+
+<!-- Cookie consent banner -->
+<div id="cv-cookie" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#f5dfa8;border-top:2px solid rgba(30,58,22,0.18);padding:14px 24px;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:0 -2px 12px rgba(0,0,0,0.08);">
+  <p style="margin:0;font-size:13px;color:rgba(30,58,22,0.8);flex:1;min-width:200px;line-height:1.5;">This site uses Google Analytics to understand how visitors find us. No personal data is sold or shared. <a href="/privacy/" style="color:#1e3a16;font-weight:600;text-decoration:underline;text-underline-offset:2px;">Privacy policy</a></p>
+  <div style="display:flex;gap:8px;flex-shrink:0;">
+    <button id="cv-decline" style="font-size:12px;font-weight:600;padding:7px 14px;border-radius:6px;border:1.5px solid rgba(30,58,22,0.3);background:transparent;color:rgba(30,58,22,0.65);cursor:pointer;font-family:inherit;">Decline</button>
+    <button id="cv-accept" style="font-size:12px;font-weight:600;padding:7px 16px;border-radius:6px;border:none;background:#1e3a16;color:#f5dfa8;cursor:pointer;font-family:inherit;">Accept analytics</button>
+  </div>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('cv-cookie');
+  if(!b)return;
+  if(!localStorage.getItem('cv_consent'))b.style.display='flex';
+  document.getElementById('cv-accept').onclick=function(){
+    localStorage.setItem('cv_consent','accepted');
+    b.style.display='none';
+    if(window.gtag)gtag('consent','update',{analytics_storage:'granted'});
+  };
+  document.getElementById('cv-decline').onclick=function(){
+    localStorage.setItem('cv_consent','declined');
+    b.style.display='none';
+  };
+})();
 </script>
 </body>
 </html>
