@@ -770,6 +770,15 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 </script>
 <script>
 // Services dropdown
+function toggleMobileServices() {
+  var btn = document.querySelector('.mobile-services-btn');
+  var panel = document.getElementById('mobile-services-panel');
+  if (!btn || !panel) return;
+  var open = btn.classList.toggle('open');
+  panel.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
 (function() {
   var dd = document.getElementById('services-dd');
   var btn = dd ? dd.querySelector('.nav-dropdown-btn') : null;
