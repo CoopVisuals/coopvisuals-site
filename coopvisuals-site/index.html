@@ -1032,6 +1032,51 @@
   @media(prefers-reduced-motion:reduce){
     *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   }
+
+  /* ── Services dropdown ── */
+  .nav-dropdown { position: relative; }
+  .nav-dropdown-btn {
+    display: flex; align-items: center; gap: 4px;
+    font-size: 13px; font-weight: 500;
+    color: rgba(245,223,168,0.75);
+    padding: 6px 12px; border-radius: var(--radius-pill);
+    background: none; border: none; cursor: pointer; font-family: inherit;
+    transition: color 0.2s, background 0.2s;
+  }
+  .nav-dropdown-btn:hover { color: var(--cream); background: rgba(245,223,168,0.1); }
+  .nav-dropdown-btn.active { color: var(--cream); }
+  .nav-dropdown-chevron { transition: transform 0.2s; flex-shrink: 0; }
+  .nav-dropdown.open .nav-dropdown-chevron { transform: rotate(180deg); }
+  .nav-dropdown-menu {
+    position: absolute; top: calc(100% + 8px); left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    background: #3A6244; border: 1px solid rgba(245,223,168,0.18);
+    border-radius: 10px; padding: 5px; min-width: 172px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  }
+  .nav-dropdown.open .nav-dropdown-menu {
+    opacity: 1; pointer-events: all; transform: translateX(-50%) translateY(0);
+  }
+  .nav-dropdown-menu a {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 12px; font-size: 13px; font-weight: 500;
+    color: rgba(245,223,168,0.8); border-radius: 6px; white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-dropdown-menu a:hover { background: rgba(245,223,168,0.12); color: var(--cream); }
+  .nav-dropdown-menu a.active { color: var(--cream); font-weight: 600; }
+  .nav-dropdown-menu a .dd-icon { font-size: 14px; opacity: 0.75; }
+
+  /* Mobile services section */
+  .mobile-services-label {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; color: rgba(245,223,168,0.4);
+    padding: 10px 20px 2px; pointer-events: none;
+  }
+  .mobile-menu a.mobile-sub { padding-left: 32px; font-size: 13px; }
+
 </style>
 </head>
 <body>
@@ -1044,7 +1089,13 @@
       <span class="nav-logo-text">Coop Visuals</span>
     </a>
     <div class="nav-links">
-      <a href="#services">Services</a>
+      <div class="nav-dropdown" id="services-dd">
+      <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">Services <svg class="nav-dropdown-chevron" width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 4 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="/web-design/" role="menuitem"><span class="dd-icon">🖥</span> Web design</a>
+        <a href="/real-estate-media/" role="menuitem"><span class="dd-icon">📷</span> Real estate media</a>
+      </div>
+    </div>
       <a href="#work">Our work</a>
       <a href="#pricing">Pricing</a>
       <a href="#about">About</a>
@@ -1056,7 +1107,9 @@
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
-    <a href="#services" onclick="toggleMenu()">Services</a>
+    <div class="mobile-services-label">Services</div>
+    <a href="/web-design/" class="mobile-sub" onclick="toggleMenu()">Web design</a>
+    <a href="/real-estate-media/" class="mobile-sub" onclick="toggleMenu()">Real estate media</a>
     <a href="#work" onclick="toggleMenu()">Our work</a>
     <a href="#pricing" onclick="toggleMenu()">Pricing</a>
     <a href="#about" onclick="toggleMenu()">About</a>
@@ -1702,6 +1755,26 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     localStorage.setItem('cv_consent','declined');
     b.style.display='none';
   };
+})();
+</script>
+<script>
+// Services dropdown
+(function() {
+  var dd = document.getElementById('services-dd');
+  var btn = dd ? dd.querySelector('.nav-dropdown-btn') : null;
+  if (!btn) return;
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var open = dd.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', function() {
+    dd.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { dd.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  });
 })();
 </script>
 </body>
