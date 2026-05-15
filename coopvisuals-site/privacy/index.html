@@ -82,7 +82,8 @@
     transition: opacity 0.15s ease, transform 0.15s ease;
     z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.25);
   }
-  .nav-dropdown.open .nav-dropdown-menu {
+  .nav-dropdown.open .nav-dropdown-menu,
+  .nav-dropdown:hover .nav-dropdown-menu {
     opacity: 1; pointer-events: all; transform: translateX(-50%) translateY(0);
   }
   .nav-dropdown-menu a {
@@ -96,12 +97,24 @@
   .nav-dropdown-menu a .dd-icon { font-size: 14px; opacity: 0.75; }
 
   /* Mobile services section */
-  .mobile-services-label {
-    font-size: 10px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.1em; color: rgba(245,223,168,0.4);
-    padding: 10px 20px 2px; pointer-events: none;
+  .mobile-services-btn {
+    display: flex; align-items: center; justify-content: space-between;
+    width: 100%; background: none; border: none; border-bottom: 1px solid rgba(245,223,168,0.1);
+    font-size: 15px; color: rgba(245,223,168,0.75); padding: 10px 0;
+    font-weight: 500; font-family: inherit; cursor: pointer; text-align: left;
   }
-  .mobile-menu a.mobile-sub { padding-left: 32px; font-size: 13px; }
+  .mobile-services-btn.open { color: var(--cream); border-bottom-color: transparent; }
+  .mobile-svc-chevron { transition: transform 0.2s; flex-shrink: 0; }
+  .mobile-services-btn.open .mobile-svc-chevron { transform: rotate(180deg); }
+  .mobile-services-panel { display: none; flex-direction: column; border-bottom: 1px solid rgba(245,223,168,0.1); }
+  .mobile-services-panel.open { display: flex; }
+  .mobile-services-panel a {
+    font-size: 14px; color: rgba(245,223,168,0.7); padding: 9px 0 9px 16px;
+    border-bottom: none; font-weight: 500; border-left: 2px solid rgba(245,223,168,0.2);
+    margin-left: 2px;
+  }
+  .mobile-services-panel a:hover { color: var(--cream); }
+  .mobile-services-panel a.active { color: var(--cream); font-weight: 600; }
 
 </style>
   <meta name="twitter:card" content="summary_large_image">
@@ -140,9 +153,11 @@
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
-    <div class="mobile-services-label">Services</div>
-    <a href="/web-design/" class="mobile-sub" onclick="toggleMenu()">Web design</a>
-    <a href="/real-estate-media/" class="mobile-sub" onclick="toggleMenu()">Real estate media</a>
+    <button class="mobile-services-btn" onclick="toggleMobileServices()" aria-expanded="false" aria-controls="mobile-services-panel">Services <svg class="mobile-svc-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mobile-services-panel" id="mobile-services-panel" role="menu">
+      <a href="/web-design/" role="menuitem" onclick="toggleMenu()">Web design</a>
+      <a href="/real-estate-media/" role="menuitem" onclick="toggleMenu()">Real estate media</a>
+    </div>
     <a href="/portfolio/">Our work</a>
     <a href="/#contact">Get started</a>
   </div>
