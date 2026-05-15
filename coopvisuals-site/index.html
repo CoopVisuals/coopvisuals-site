@@ -13,6 +13,10 @@
 <meta property="og:url" content="https://www.coopvisuals.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://www.coopvisuals.com/images/hero_listing.webp" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Web Design & Real Estate Media | Fort Myers | Coop Visuals">
+  <meta name="twitter:description" content="Fort Myers web design and real estate media. Custom websites from $497. Listing photos in <24hr.">
+  <meta name="twitter:image" content="https://www.coopvisuals.com/images/hero_listing.webp">
 <link rel="icon" href="/images/Logo_tan.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,8 +53,9 @@
       },
       "areaServed": ["Fort Myers","Cape Coral","Naples","Bonita Springs","Estero","Lehigh Acres","Fort Myers Beach","Sanibel"],
       "serviceType": ["Web Design","Website Management","Local SEO","Real Estate Photography","Real Estate Video Production","Drone Aerial Photography","Agent Branding"],
+      "priceRange": "$$",
       "description": "Fort Myers web design agency and real estate media company. Website design, SEO, and ongoing management for SWFL small businesses. Real estate photography, drone video, and agent branding.",
-      "sameAs": ["https://www.instagram.com/coopvisuals_"]
+      "sameAs": ["https://www.instagram.com/coopvisuals_", "https://share.google/2fnpM42XYm6vKdR6Z"]
     },
     {
       "@type": "FAQPage",
@@ -63,7 +68,7 @@
         {
           "@type": "Question",
           "name": "Does Coop Visuals offer real estate photography in Fort Myers?",
-          "acceptedAnswer": {"@type": "Answer","text": "Yes. Coop Visuals provides real estate listing photography, cinematic video production, FAA-licensed drone aerial photography, and agent branding content throughout Fort Myers, Cape Coral, and Southwest Florida. Turnaround is 24-48 hours."}
+          "acceptedAnswer": {"@type": "Answer","text": "Yes. Coop Visuals provides real estate listing photography, cinematic video production, FAA-licensed drone aerial photography, and agent branding content throughout Fort Myers, Cape Coral, and Southwest Florida. Listing photos delivered in less than 24 hours. Cinematic video typically takes 3–5 days."}
         },
         {
           "@type": "Question",
@@ -1021,11 +1026,18 @@
     .contact-inner { grid-template-columns: 1fr; }
     .footer-top { flex-direction: column; }
   }
+  .skip-link{position:absolute;top:-44px;left:0;background:#000;color:#fff;padding:8px 12px;z-index:10001;border-radius:0 0 4px 0;font-size:14px;font-weight:600}
+  .skip-link:focus{top:0}
+
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  }
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-<nav>
+<nav aria-label="Main">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
       <img src="/images/emblem_tan.png" alt="Coop Visuals" width="36" height="36" style="border-radius:0;object-fit:contain;">
@@ -1051,6 +1063,7 @@
     <a href="#contact" onclick="toggleMenu()">Get started</a>
   </div>
 </nav>
+<main id="main-content">
 
 <div class="hero">
   <div class="hero-inner">
@@ -1072,7 +1085,7 @@
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#F5DFA8" stroke-width="1.5"/><path d="M8 7.5l5 2.5-5 2.5V7.5z" fill="#F5DFA8"/></svg>
         </div>
         <div class="split-title">We shoot real estate media</div>
-        <p class="split-desc">Listing photos, cinematic video, drone aerials, and agent branding throughout Fort Myers and Cape Coral. 24–48hr turnaround.</p>
+        <p class="split-desc">Listing photos, cinematic video, drone aerials, and agent branding throughout Fort Myers and Cape Coral. Photos in less than 24 hours.</p>
         <span class="split-btn">See media services →</span>
       </a>
     </div>
@@ -1102,10 +1115,10 @@
       <img src="images/hero_listing.webp" alt="Real estate listing photography Fort Myers waterfront home" fetchpriority="high" width="1920" height="1080">
     </div>
     <div class="img-wrap">
-      <img src="images/portfolio1.jpg" alt="SWFL real estate media portfolio" loading="lazy" width="1920" height="1280">
+      <img src="images/fort-myers-real-estate-listing-photography.webp" alt="SWFL real estate media portfolio" loading="lazy" width="1920" height="1280">
     </div>
     <div class="img-wrap">
-      <img src="images/drone.jpg" alt="Drone aerial photography Fort Myers real estate" loading="lazy" width="1920" height="1080">
+      <img src="images/fort-myers-aerial-drone-photography.webp" alt="Drone aerial photography Fort Myers real estate" loading="lazy" width="1920" height="1080">
     </div>
   </div>
 </div>
@@ -1236,7 +1249,7 @@
     <div class="work-grid">
       <div class="work-card">
         <div class="work-img">
-          <img src="images/portfolio1.jpg" alt="Roofing company website redesign SWFL" loading="lazy" width="1920" height="1280">
+          <img src="images/fort-myers-real-estate-listing-photography.webp" alt="Roofing company website redesign SWFL" loading="lazy" width="1920" height="1280">
         </div>
         <div class="work-body">
           <div class="work-industry">Roofing · Web design & SEO</div>
@@ -1276,7 +1289,7 @@
       </div>
       <div class="work-card">
         <div class="work-img">
-          <img src="images/drone.jpg" alt="Drone aerial real estate photography Fort Myers Cape Coral" loading="lazy" width="1920" height="1080">
+          <img src="images/fort-myers-aerial-drone-photography.webp" alt="Drone aerial real estate photography Fort Myers Cape Coral" loading="lazy" width="1920" height="1080">
         </div>
         <div class="work-body">
           <div class="work-industry">Title insurance · Web design & SEO</div>
@@ -1359,7 +1372,7 @@
     <div class="about-inner">
       <div>
         <div class="about-img-wrap">
-          <img src="images/headshot.webp" alt="Michael Cooper — Coop Visuals founder, Fort Myers web designer and real estate photographer" loading="lazy" width="1080" height="1080">
+          <img src="images/michael-cooper-coop-visuals-fort-myers.webp" alt="Michael Cooper — Coop Visuals founder, Fort Myers web designer and real estate photographer" loading="lazy" width="1080" height="1080">
           <div class="about-accent">
             <div class="about-accent-text">Michael Cooper</div>
             <div class="about-accent-sub">Founder · Fort Myers, FL</div>
@@ -1582,6 +1595,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="footer-inner">
     <div class="footer-top">

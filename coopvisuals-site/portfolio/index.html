@@ -6,12 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio | Web Design & Real Estate Media Work | Coop Visuals</title>
 <meta name="description" content="See recent web design and real estate media work from Coop Visuals in Fort Myers, FL. Client results, website projects, listing photography, and drone aerials across Southwest Florida.">
-<link rel="canonical" href="https://www.coopvisuals.com/portfolio">
+<link rel="canonical" href="https://www.coopvisuals.com/portfolio/">
 <meta property="og:title" content="Portfolio | Web Design & Real Estate Media Work | Coop Visuals" />
 <meta property="og:description" content="Recent web design and real estate media work from Coop Visuals in Fort Myers, FL. Client results across Southwest Florida." />
 <meta property="og:url" content="https://www.coopvisuals.com/portfolio" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://www.coopvisuals.com/images/hero_listing.webp" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfolio | Web Design & Real Estate Media | Coop Visuals">
+  <meta name="twitter:description" content="Recent web design and real estate media work from Coop Visuals in Fort Myers, FL.">
+  <meta name="twitter:image" content="https://www.coopvisuals.com/images/hero_listing.webp">
 <link rel="icon" href="/images/Logo_tan.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,10 +118,21 @@
   .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;flex-wrap:wrap;gap:8px;}
   .footer-copy{font-size:12px;font-weight:500;color:rgba(245,223,168,0.6);}
   @media(max-width:768px){.nav-links{display:none;}.nav-menu-btn{display:flex;}.work-grid{grid-template-columns:1fr;}.media-grid{grid-template-columns:1fr 1fr;}.video-grid{grid-template-columns:1fr 1fr;}}
+  .skip-link{position:absolute;top:-44px;left:0;background:#000;color:#fff;padding:8px 12px;z-index:10001;border-radius:0 0 4px 0;font-size:14px;font-weight:600}
+  .skip-link:focus{top:0}
+
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  }
 </style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.coopvisuals.com/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.coopvisuals.com/portfolio/"}]}
+</script>
 </head>
 <body>
-<nav>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<nav aria-label="Main">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
       
@@ -142,6 +157,7 @@
     <a href="/#contact">Get started</a>
   </div>
 </nav>
+<main id="main-content">
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
     <a href="/">Home</a><span>›</span><span>Portfolio</span>
@@ -163,7 +179,7 @@
     <div class="work-grid">
       <div class="work-card">
         <div class="work-img">
-          <img src="/images/portfolio1.jpg" alt="Roofing company website redesign Fort Myers SWFL" loading="lazy" width="1920" height="1280">
+          <img src="/images/fort-myers-real-estate-listing-photography.webp" alt="Roofing company website redesign Fort Myers SWFL" loading="lazy" width="1920" height="1280">
         </div>
         <div class="work-body">
           <div class="work-tag">Roofing · Web design & SEO</div>
@@ -173,7 +189,7 @@
       </div>
       <div class="work-card">
         <div class="work-img">
-          <img src="/images/drone.jpg" alt="Drone aerial photography Cape Coral real estate" loading="lazy" width="1920" height="1080">
+          <img src="/images/fort-myers-aerial-drone-photography.webp" alt="Drone aerial photography Cape Coral real estate" loading="lazy" width="1920" height="1080">
         </div>
         <div class="work-body">
           <div class="work-tag">Title insurance · Web design & SEO</div>
@@ -205,10 +221,10 @@
         <img src="/images/hero_listing.webp" alt="Real estate listing photography Fort Myers waterfront home" loading="lazy" width="1920" height="1080">
       </div>
       <div class="media-item">
-        <img src="/images/portfolio1.jpg" alt="Luxury listing photography Southwest Florida" loading="lazy" width="1920" height="1280">
+        <img src="/images/fort-myers-real-estate-listing-photography.webp" alt="Luxury listing photography Southwest Florida" loading="lazy" width="1920" height="1280">
       </div>
       <div class="media-item">
-        <img src="/images/drone.jpg" alt="FAA licensed drone aerial photography Fort Myers Cape Coral" loading="lazy" width="1920" height="1080">
+        <img src="/images/fort-myers-aerial-drone-photography.webp" alt="FAA licensed drone aerial photography Fort Myers Cape Coral" loading="lazy" width="1920" height="1080">
       </div>
     </div>
   </div>
@@ -347,6 +363,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="footer-inner">
     <div class="footer-top">

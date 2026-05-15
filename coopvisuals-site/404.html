@@ -34,10 +34,26 @@
   .btn-primary:hover{background:var(--cream-light);}
   .btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--cream);font-size:14px;font-weight:500;padding:12px 24px;border-radius:var(--radius-pill);border:1px solid rgba(245,223,168,0.35);transition:background 0.2s;}
   .btn-outline:hover{background:rgba(245,223,168,0.1);}
+  .skip-link{position:absolute;top:-44px;left:0;background:#000;color:#fff;padding:8px 12px;z-index:10001;border-radius:0 0 4px 0;font-size:14px;font-weight:600}
+  .skip-link:focus{top:0}
+
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  }
 </style>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Page Not Found | Coop Visuals">
+  <meta name="twitter:description" content="This page could not be found. Return to Coop Visuals — Fort Myers web design and real estate media.">
+  <meta name="twitter:image" content="https://www.coopvisuals.com/images/hero_listing.webp">
+  <meta property="og:title" content="Page Not Found | Coop Visuals" />
+  <meta property="og:description" content="This page could not be found. Return to Coop Visuals — Fort Myers web design and real estate media." />
+  <meta property="og:url" content="https://www.coopvisuals.com" />
+  <meta property="og:image" content="https://www.coopvisuals.com/images/hero_listing.webp" />
+  <meta property="og:type" content="website" />
 </head>
 <body>
-<nav>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<nav aria-label="Main">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
       
@@ -47,6 +63,7 @@
     <a href="/#contact" class="nav-cta">Get started</a>
   </div>
 </nav>
+<main id="main-content">
 <div class="main">
   <div class="inner">
     <div class="code">404</div>

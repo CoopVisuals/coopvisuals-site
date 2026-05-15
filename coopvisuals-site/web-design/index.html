@@ -6,12 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Web Design Fort Myers, FL | Website Design & Management | Coop Visuals</title>
 <meta name="description" content="Professional web design and website management for Fort Myers and Cape Coral small businesses. Custom sites from $497 setup + $125/mo. SEO included. No contracts.">
-<link rel="canonical" href="https://www.coopvisuals.com/web-design">
+<link rel="canonical" href="https://www.coopvisuals.com/web-design/">
 <meta property="og:title" content="Web Design Fort Myers, FL | Website Design & Management | Coop Visuals" />
 <meta property="og:description" content="Custom websites for Fort Myers small businesses. From $497 setup + $125/mo. Local SEO, hosting, and monthly management included. No contracts." />
 <meta property="og:url" content="https://www.coopvisuals.com/web-design" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://www.coopvisuals.com/images/hero_listing.webp" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Web Design Fort Myers FL | Coop Visuals">
+  <meta name="twitter:description" content="Custom websites for Fort Myers small businesses. $497 setup + $125/mo. SEO included.">
+  <meta name="twitter:image" content="https://www.coopvisuals.com/images/hero_listing.webp">
 <link rel="icon" href="/images/Logo_tan.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -285,11 +289,18 @@
     .nav-menu-btn { display: flex; }
     .process-grid { grid-template-columns: 1fr; }
   }
+  .skip-link{position:absolute;top:-44px;left:0;background:#000;color:#fff;padding:8px 12px;z-index:10001;border-radius:0 0 4px 0;font-size:14px;font-weight:600}
+  .skip-link:focus{top:0}
+
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  }
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-<nav>
+<nav aria-label="Main">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
       
@@ -314,6 +325,7 @@
     <a href="/#contact" onclick="toggleMenu()">Get started</a>
   </div>
 </nav>
+<main id="main-content">
 
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
@@ -613,6 +625,7 @@
   </div>
 </div>
 
+</main>
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
