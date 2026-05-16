@@ -131,7 +131,7 @@
   .nav-dropdown-btn.active { color: var(--cream); }
   .nav-dropdown-chevron { transition: transform 0.2s; flex-shrink: 0; }
   .nav-dropdown.open .nav-dropdown-chevron { transform: rotate(180deg); }
-  .nav-dropdown-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-6px); background: #3A6244; border: 1px solid rgba(245,223,168,0.18); border-radius: 10px; padding: 5px; min-width: 172px; opacity: 0; pointer-events: none; transition: opacity 0.15s ease, transform 0.15s ease; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+  .nav-dropdown-menu { position: absolute; top: 100%; margin-top: 0; left: 50%; transform: translateX(-50%) translateY(-6px); background: #3A6244; border: 1px solid rgba(245,223,168,0.18); border-radius: 10px; padding: 5px; min-width: 172px; opacity: 0; pointer-events: none; transition: opacity 0.15s ease, transform 0.15s ease; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
   .nav-dropdown.open .nav-dropdown-menu, .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; pointer-events: all; transform: translateX(-50%) translateY(0); }
   .nav-dropdown-menu a { display: flex; align-items: center; gap: 8px; padding: 8px 12px; font-size: 13px; font-weight: 500; color: rgba(245,223,168,0.8); border-radius: 6px; white-space: nowrap; transition: background 0.15s, color 0.15s; }
   .nav-dropdown-menu a:hover { background: rgba(245,223,168,0.12); color: var(--cream); }
