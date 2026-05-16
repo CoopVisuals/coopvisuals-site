@@ -1,0 +1,169 @@
+{
+  "site": "www.coopvisuals.com",
+  "last_run": "2026-05-16",
+  "clusters": {
+    "real-estate-listing-photos": {
+      "pillar_url": "/real-estate-media/listing-photos/",
+      "pages": [
+        "/real-estate-media/listing-photos/",
+        "/real-estate-media/listing-photos/cape-coral/"
+      ],
+      "status": "partial",
+      "note": "Fort Myers location spoke pending GSC signal"
+    },
+    "real-estate-video": {
+      "pillar_url": "/real-estate-media/real-estate-video/",
+      "pages": ["/real-estate-media/real-estate-video/"],
+      "status": "built"
+    },
+    "agent-branding": {
+      "pillar_url": "/real-estate-media/agent-branding/",
+      "pages": ["/real-estate-media/agent-branding/"],
+      "status": "partial"
+    },
+    "vacation-rental-photography": {
+      "pillar_url": "/real-estate-media/vacation-rental/",
+      "pages": ["/real-estate-media/vacation-rental/"],
+      "status": "partial"
+    },
+    "web-design-swfl": {
+      "pillar_url": "/swfl-small-business/web-design/",
+      "pages": ["/swfl-small-business/web-design/"],
+      "status": "built"
+    },
+    "social-media-content": {
+      "pillar_url": "/swfl-small-business/social-media-content/",
+      "pages": ["/swfl-small-business/social-media-content/"],
+      "status": "built"
+    },
+    "gbp-management": {
+      "pillar_url": "/swfl-small-business/gbp-management/",
+      "pages": ["/swfl-small-business/gbp-management/"],
+      "status": "built"
+    },
+    "upgrade-my-website": {
+      "pillar_url": "/swfl-small-business/upgrade-my-website/",
+      "pages": ["/swfl-small-business/upgrade-my-website/"],
+      "status": "built"
+    }
+  },
+  "pages": {
+    "/about/": {
+      "target_keyword": "coop visuals fort myers",
+      "built_date": "2026-05-16",
+      "opp_score": null,
+      "image_used": "/images/about/michael-cooper-coop-visuals-fort-myers.webp",
+      "image_source": "about-subfolder",
+      "cluster_key": null,
+      "pillar_url": "/about/",
+      "word_count": 600
+    },
+    "/swfl-small-business/social-media-content/": {
+      "target_keyword": "social media content creation fort myers",
+      "built_date": "2026-05-16",
+      "opp_score": null,
+      "image_used": "/images/social-media-content/Arepas_Final.webp",
+      "image_source": "social-media-content-subfolder",
+      "cluster_key": "social-media-content",
+      "pillar_url": "/swfl-small-business/social-media-content/",
+      "word_count": 650
+    },
+    "/real-estate-media/listing-photos/": {
+      "target_keyword": "real estate listing photography fort myers",
+      "built_date": "2026-05-16",
+      "opp_score": null,
+      "image_used": "/images/listing-photos/CPV01651_GEN.webp",
+      "image_source": "listing-photos-subfolder",
+      "cluster_key": "real-estate-listing-photos",
+      "pillar_url": "/real-estate-media/listing-photos/",
+      "word_count": 577
+    },
+    "/real-estate-media/listing-photos/cape-coral/": {
+      "target_keyword": "real estate photography cape coral",
+      "built_date": "2026-05-16",
+      "opp_score": null,
+      "image_used": "/images/listing-photos/cape-coral/DJI_0169.webp",
+      "image_source": "listing-photos-cape-coral-subfolder",
+      "cluster_key": "real-estate-listing-photos",
+      "pillar_url": "/real-estate-media/listing-photos/",
+      "word_count": 580
+    },
+    "/real-estate-media/vacation-rental/": {
+      "target_keyword": "vacation rental photography fort myers",
+      "built_date": "2026-05-16",
+      "opp_score": null,
+      "image_used": "/images/vacation-rental/03-CPV01222.webp",
+      "image_source": "vacation-rental-subfolder",
+      "cluster_key": "vacation-rental-photography",
+      "pillar_url": "/real-estate-media/vacation-rental/",
+      "word_count": 562
+    },
+    "/real-estate-media/agent-branding/": {
+      "target_keyword": "real estate agent branding video fort myers",
+      "built_date": "2026-05-16",
+      "opp_score": null,
+      "image_used": null,
+      "image_source": "instagram-embeds",
+      "cluster_key": "agent-branding",
+      "pillar_url": "/real-estate-media/agent-branding/",
+      "word_count": 491
+    },
+    "/real-estate-media/real-estate-video/": {
+      "target_keyword": "real estate video fort myers",
+      "built_date": "2026-05-16",
+      "opp_score": null,
+      "image_used": null,
+      "image_source": "youtube-embeds",
+      "cluster_key": "real-estate-video",
+      "pillar_url": "/real-estate-media/real-estate-video/",
+      "word_count": 702
+    },
+    "/swfl-small-business/web-design/": {
+      "target_keyword": "web design fort myers small business",
+      "built_date": "2026-05-16",
+      "opp_score": null,
+      "image_used": null,
+      "image_source": "none",
+      "cluster_key": "web-design-swfl",
+      "pillar_url": "/swfl-small-business/web-design/",
+      "word_count": 750
+    },
+    "/swfl-small-business/gbp-management/": {
+      "target_keyword": "google business profile management fort myers",
+      "built_date": "2026-05-16",
+      "opp_score": null,
+      "image_used": null,
+      "image_source": "none",
+      "cluster_key": "gbp-management",
+      "pillar_url": "/swfl-small-business/gbp-management/",
+      "word_count": 623
+    },
+    "/swfl-small-business/upgrade-my-website/": {
+      "target_keyword": "website redesign fort myers small business",
+      "built_date": "2026-05-16",
+      "opp_score": null,
+      "image_used": null,
+      "image_source": "none",
+      "cluster_key": "upgrade-my-website",
+      "pillar_url": "/swfl-small-business/upgrade-my-website/",
+      "word_count": 686
+    }
+  },
+  "planned_pages": {
+    "/real-estate-media/listing-photos/fort-myers/": {
+      "target_keyword": "real estate photography fort myers",
+      "status": "pending-gsc",
+      "cluster_key": "real-estate-listing-photos"
+    }
+  },
+  "deleted_pages": {
+    "/video-production-fort-myers/": {
+      "deleted_date": "2026-05-16",
+      "reason": "Legacy page — no longer needed, removed from nav and sitemap"
+    },
+    "/real-estate-photography-cape-coral/": {
+      "deleted_date": "2026-05-16",
+      "reason": "Legacy page — replaced by /real-estate-media/listing-photos/cape-coral/"
+    }
+  }
+}

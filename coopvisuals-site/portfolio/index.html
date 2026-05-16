@@ -198,15 +198,26 @@
       <span class="nav-logo-text">Coop Visuals</span>
     </a>
     <div class="nav-links">
-      <div class="nav-dropdown" id="services-dd">
-      <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">Services <svg class="nav-dropdown-chevron" width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 4 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <div class="nav-dropdown-menu" role="menu">
-        <a href="/web-design/" role="menuitem"><span class="dd-icon">🖥</span> Web design</a>
-        <a href="/real-estate-media/" role="menuitem"><span class="dd-icon">📷</span> Real estate media</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">For Your Business <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="/swfl-small-business/web-design/" role="menuitem">Get a Website</a>
+          <a href="/swfl-small-business/social-media-content/" role="menuitem">Social Media Content</a>
+          <a href="/swfl-small-business/gbp-management/" role="menuitem">GBP Management</a>
+          <a href="/swfl-small-business/upgrade-my-website/" role="menuitem">Upgrade My Site</a>
+        </div>
       </div>
-    </div>
-      <a href="/portfolio/" class="active">Our work</a>
-      <a href="/#about">About</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">For Agents <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="/real-estate-media/listing-photos/" role="menuitem">Listing Photos</a>
+          <a href="/real-estate-media/real-estate-video/" role="menuitem">Real Estate Video</a>
+          <a href="/real-estate-media/agent-branding/" role="menuitem">Agent Branding</a>
+          <a href="/real-estate-media/vacation-rental/" role="menuitem">Vacation Rental</a>
+        </div>
+      </div>
+      <a href="/portfolio/" class="active">Our Work</a>
+      <a href="/about/">About</a>
     </div>
     <a href="/#contact" class="nav-cta">Get started</a>
     <button class="nav-menu-btn" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
@@ -214,13 +225,22 @@
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
-    <button class="mobile-services-btn" onclick="toggleMobileServices()" aria-expanded="false" aria-controls="mobile-services-panel">Services <svg class="mobile-svc-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    <div class="mobile-services-panel" id="mobile-services-panel" role="menu">
-      <a href="/web-design/" role="menuitem" onclick="toggleMenu()">Web design</a>
-      <a href="/real-estate-media/" role="menuitem" onclick="toggleMenu()">Real estate media</a>
+    <button class="mobile-services-btn" id="mob-biz-btn">For Your Business <svg class="mobile-svc-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mobile-services-panel" id="mob-biz-panel">
+      <a href="/swfl-small-business/web-design/">Get a Website</a>
+      <a href="/swfl-small-business/social-media-content/">Social Media Content</a>
+      <a href="/swfl-small-business/gbp-management/">GBP Management</a>
+      <a href="/swfl-small-business/upgrade-my-website/">Upgrade My Site</a>
     </div>
-    <a href="/portfolio/">Our work</a>
-    <a href="/#contact">Get started</a>
+    <button class="mobile-services-btn" id="mob-agents-btn">For Agents <svg class="mobile-svc-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mobile-services-panel" id="mob-agents-panel">
+      <a href="/real-estate-media/listing-photos/">Listing Photos</a>
+      <a href="/real-estate-media/real-estate-video/">Real Estate Video</a>
+      <a href="/real-estate-media/agent-branding/">Agent Branding</a>
+      <a href="/real-estate-media/vacation-rental/">Vacation Rental</a>
+    </div>
+    <a href="/portfolio/">Our Work</a>
+    <a href="/about/">About</a>
   </div>
 </nav>
 <main id="main-content">
@@ -233,7 +253,7 @@
   <div class="container">
     <div class="hero-eyebrow">Our work · Fort Myers, FL</div>
     <h1 class="page-h1">Results that speak for themselves.</h1>
-    <p class="page-sub"><a href="/web-design/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Web design</a> and local SEO, plus <a href="/real-estate-media/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">listing photography, video, and drone aerials</a> for agents across Southwest Florida.</p>
+    <p class="page-sub"><a href="/swfl-small-business/web-design/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Web design</a> and local SEO, plus <a href="/real-estate-media/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">listing photography, video, and drone aerials</a> for agents across Southwest Florida.</p>
   </div>
 </div>
 
@@ -313,39 +333,6 @@
         </div>
       </a>
 
-      <a class="video-card" href="https://www.youtube.com/watch?v=hY4qXl7Tmmc" target="_blank" rel="noopener">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/hY4qXl7Tmmc/hqdefault.jpg" alt="Cinematic Real Estate Teaser | Fort Myers Shores" loading="lazy" width="480" height="360">
-          <div class="video-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="38" fill="rgba(245,223,168,0.15)" stroke="rgba(245,223,168,0.6)" stroke-width="1.5"/><polygon points="32,24 60,40 32,56" fill="#F5DFA8"/></svg></div>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Cinematic Teaser</div>
-          <div class="video-title">Cinematic Real Estate Teaser | Fort Myers Shores</div>
-        </div>
-      </a>
-
-      <a class="video-card" href="https://www.youtube.com/watch?v=dYKBn2rt4Hw" target="_blank" rel="noopener">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/dYKBn2rt4Hw/hqdefault.jpg" alt="Cinematic Real Estate Tour | Fort Myers Shores" loading="lazy" width="480" height="360">
-          <div class="video-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="38" fill="rgba(245,223,168,0.15)" stroke="rgba(245,223,168,0.6)" stroke-width="1.5"/><polygon points="32,24 60,40 32,56" fill="#F5DFA8"/></svg></div>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Cinematic Tour</div>
-          <div class="video-title">Cinematic Real Estate Tour | Fort Myers Shores</div>
-        </div>
-      </a>
-
-      <a class="video-card" href="https://www.youtube.com/watch?v=uJB2d4zkrQI" target="_blank" rel="noopener">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/uJB2d4zkrQI/hqdefault.jpg" alt="Cinematic Real Estate Teaser | Multiply Sound" loading="lazy" width="480" height="360">
-          <div class="video-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="38" fill="rgba(245,223,168,0.15)" stroke="rgba(245,223,168,0.6)" stroke-width="1.5"/><polygon points="32,24 60,40 32,56" fill="#F5DFA8"/></svg></div>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Cinematic Teaser</div>
-          <div class="video-title">Cinematic Real Estate Teaser | Multiply Sound</div>
-        </div>
-      </a>
-
       <a class="video-card" href="https://www.youtube.com/watch?v=PtvUDK7nh24" target="_blank" rel="noopener">
         <div class="video-thumb">
           <img src="https://img.youtube.com/vi/PtvUDK7nh24/hqdefault.jpg" alt="Cinematic Real Estate Tour | Babcock Ranch" loading="lazy" width="480" height="360">
@@ -354,39 +341,6 @@
         <div class="video-info">
           <div class="video-tag">Cinematic Tour</div>
           <div class="video-title">Cinematic Real Estate Tour | Babcock Ranch</div>
-        </div>
-      </a>
-
-      <a class="video-card" href="https://www.youtube.com/watch?v=4C7ylFxPB-M" target="_blank" rel="noopener">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/4C7ylFxPB-M/hqdefault.jpg" alt="Cinematic Real Estate Tour | Eagle Reserve" loading="lazy" width="480" height="360">
-          <div class="video-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="38" fill="rgba(245,223,168,0.15)" stroke="rgba(245,223,168,0.6)" stroke-width="1.5"/><polygon points="32,24 60,40 32,56" fill="#F5DFA8"/></svg></div>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Cinematic Tour</div>
-          <div class="video-title">Cinematic Real Estate Tour | Eagle Reserve</div>
-        </div>
-      </a>
-
-      <a class="video-card" href="https://www.youtube.com/watch?v=YnWxR68v72c" target="_blank" rel="noopener">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/YnWxR68v72c/hqdefault.jpg" alt="Cinematic Real Estate Tour | Club at Gateway" loading="lazy" width="480" height="360">
-          <div class="video-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="38" fill="rgba(245,223,168,0.15)" stroke="rgba(245,223,168,0.6)" stroke-width="1.5"/><polygon points="32,24 60,40 32,56" fill="#F5DFA8"/></svg></div>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Cinematic Tour</div>
-          <div class="video-title">Cinematic Real Estate Tour | Club at Gateway</div>
-        </div>
-      </a>
-
-      <a class="video-card" href="https://www.youtube.com/watch?v=c2d2nCxqtx4" target="_blank" rel="noopener">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/c2d2nCxqtx4/hqdefault.jpg" alt="Cinematic Real Estate Tour | Daniels Preserve" loading="lazy" width="480" height="360">
-          <div class="video-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="38" fill="rgba(245,223,168,0.15)" stroke="rgba(245,223,168,0.6)" stroke-width="1.5"/><polygon points="32,24 60,40 32,56" fill="#F5DFA8"/></svg></div>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Cinematic Tour</div>
-          <div class="video-title">Cinematic Real Estate Tour | Daniels Preserve</div>
         </div>
       </a>
 
@@ -401,21 +355,13 @@
         </div>
       </a>
 
-      <a class="video-card" href="https://www.youtube.com/watch?v=gfGUguu8iu4" target="_blank" rel="noopener">
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/gfGUguu8iu4/hqdefault.jpg" alt="Cinematic Real Estate Tour | Fort Myers Shores" loading="lazy" width="480" height="360">
-          <div class="video-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="38" fill="rgba(245,223,168,0.15)" stroke="rgba(245,223,168,0.6)" stroke-width="1.5"/><polygon points="32,24 60,40 32,56" fill="#F5DFA8"/></svg></div>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Cinematic Tour</div>
-          <div class="video-title">Cinematic Real Estate Tour | Fort Myers Shores</div>
-        </div>
-      </a>
-
     </div>
-    <div style="text-align:center;margin-top:36px;">
+    <div style="text-align:center;margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="/real-estate-media/real-estate-video/" style="display:inline-flex;align-items:center;gap:8px;color:var(--cream);font-size:13px;font-weight:600;background:rgba(245,223,168,0.15);border:1px solid rgba(245,223,168,0.35);padding:10px 22px;border-radius:100px;transition:background 0.2s;">
+        See all listing videos →
+      </a>
       <a href="https://youtube.com/@coop_visuals" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;color:rgba(245,223,168,0.7);font-size:13px;font-weight:500;border:1px solid rgba(245,223,168,0.25);padding:10px 22px;border-radius:100px;transition:color 0.2s,border-color 0.2s;">
-        View all videos on YouTube →
+        View on YouTube →
       </a>
     </div>
   </div>
@@ -424,7 +370,7 @@
 <section class="cta-section">
   <div class="container">
     <h2 class="cta-h2">Ready to add your project to this list?</h2>
-    <p class="cta-sub">Whether you need a <a href="/web-design/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">new website</a> or <a href="/real-estate-media/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">media for your next listing</a> — get in touch and we'll put together a plan.</p>
+    <p class="cta-sub">Whether you need a <a href="/swfl-small-business/web-design/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">new website</a> or <a href="/real-estate-media/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">media for your next listing</a> — get in touch and we'll put together a plan.</p>
     <a href="/#contact" class="cta-btn">Get a free quote</a>
   </div>
 </section>
@@ -438,7 +384,7 @@
         <p class="footer-tagline">Fort Myers web design & real estate media. Formerly WebWorx.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="/web-design/">Web design</a>
+        <a href="/swfl-small-business/web-design/">Web design</a>
         <a href="/real-estate-media/">Real estate media</a>
         <a href="/#pricing">Pricing</a>
         <a href="/portfolio/">Our work</a>
@@ -489,31 +435,41 @@
 })();
 </script>
 <script>
-// Services dropdown
-function toggleMobileServices() {
-  var btn = document.querySelector('.mobile-services-btn');
-  var panel = document.getElementById('mobile-services-panel');
-  if (!btn || !panel) return;
-  var open = btn.classList.toggle('open');
-  panel.classList.toggle('open', open);
-  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-}
-
+// Desktop dropdowns
 (function() {
-  var dd = document.getElementById('services-dd');
-  var btn = dd ? dd.querySelector('.nav-dropdown-btn') : null;
-  if (!btn) return;
-  btn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    var open = dd.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  document.querySelectorAll('.nav-dropdown').forEach(function(dd) {
+    var btn = dd.querySelector('.nav-dropdown-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = dd.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.querySelectorAll('.nav-dropdown').forEach(function(other) {
+        if (other !== dd) { other.classList.remove('open'); var ob = other.querySelector('.nav-dropdown-btn'); if (ob) ob.setAttribute('aria-expanded','false'); }
+      });
+    });
   });
   document.addEventListener('click', function() {
-    dd.classList.remove('open');
-    btn.setAttribute('aria-expanded', 'false');
+    document.querySelectorAll('.nav-dropdown').forEach(function(dd) {
+      dd.classList.remove('open'); var btn = dd.querySelector('.nav-dropdown-btn'); if (btn) btn.setAttribute('aria-expanded','false');
+    });
   });
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') { dd.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+    if (e.key === 'Escape') { document.querySelectorAll('.nav-dropdown').forEach(function(dd) { dd.classList.remove('open'); var btn = dd.querySelector('.nav-dropdown-btn'); if (btn) btn.setAttribute('aria-expanded','false'); }); }
+  });
+})();
+// Mobile sub-panels
+(function() {
+  var menuBtn = document.querySelector('.nav-menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', function() { menu.classList.toggle('open'); });
+  }
+  [['mob-biz-btn','mob-biz-panel'],['mob-agents-btn','mob-agents-panel']].forEach(function(pair) {
+    var btn = document.getElementById(pair[0]);
+    var panel = document.getElementById(pair[1]);
+    if (!btn || !panel) return;
+    btn.addEventListener('click', function() { var open = btn.classList.toggle('open'); panel.classList.toggle('open', open); });
   });
 })();
 </script>
