@@ -205,7 +205,7 @@
       <a href="/portfolio/">Our Work</a>
       <a href="/about/">About</a>
     </div>
-    <a href="tel:+12398496663" class="nav-cta">Get Started</a>
+    <a href="/#contact" class="nav-cta">Get Started</a>
     <button class="nav-menu-btn" aria-label="Open menu" aria-expanded="false">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
@@ -279,13 +279,19 @@
       <div class="reels-row">
         <div>
           <div class="reel-embed">
-            <iframe src="https://www.instagram.com/reel/DU0YW3PEQ-1/embed/" title="Stella Coffee behind-the-counter Reel by Coop Visuals" loading="lazy" allowfullscreen></iframe>
+            <div class="reel-placeholder" data-src="https://www.instagram.com/reel/DU0YW3PEQ-1/embed/" style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;background:#111;border-radius:inherit;" onclick="loadReel(this)">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(245,223,168,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(245,223,168,0.7)" stroke="none"/></svg>
+              <span style="font-size:12px;color:rgba(245,223,168,0.6);font-family:inherit;">Tap to load video</span>
+            </div>
           </div>
           <p class="reel-caption">Behind-the-counter espresso content for @stellacoffeetrailer — SWFL</p>
         </div>
         <div>
           <div class="reel-embed">
-            <iframe src="https://www.instagram.com/reel/DVGThpwERvn/embed/" title="Stella Coffee on location at Buckingham Farms Reel by Coop Visuals" loading="lazy" allowfullscreen></iframe>
+            <div class="reel-placeholder" data-src="https://www.instagram.com/reel/DVGThpwERvn/embed/" style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;background:#111;border-radius:inherit;" onclick="loadReel(this)">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(245,223,168,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(245,223,168,0.7)" stroke="none"/></svg>
+              <span style="font-size:12px;color:rgba(245,223,168,0.6);font-family:inherit;">Tap to load video</span>
+            </div>
           </div>
           <p class="reel-caption">On location at @buckingham_farms with @stellacoffeetrailer</p>
         </div>
@@ -399,6 +405,13 @@
 </footer>
 
 <script>
+  function loadReel(el) {
+    var iframe = document.createElement('iframe');
+    iframe.src = el.dataset.src;
+    iframe.style.cssText = 'width:100%;height:100%;border:none;';
+    iframe.allowFullscreen = true;
+    el.parentNode.replaceChild(iframe, el);
+  }
   document.querySelectorAll('.nav-dropdown-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const dd = btn.closest('.nav-dropdown');

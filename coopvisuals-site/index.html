@@ -878,6 +878,8 @@
   }
   .form-textarea { resize: vertical; min-height: 100px; }
   .form-select { appearance: none; cursor: pointer; }
+  .form-check { display:flex; align-items:center; gap:7px; font-size:13px; color:var(--text-muted); cursor:pointer; padding:3px 0; }
+  .form-check input[type=checkbox] { width:15px; height:15px; accent-color:var(--green); cursor:pointer; flex-shrink:0; }
   .form-submit {
     width: 100%;
     padding: 13px;
@@ -1661,17 +1663,19 @@
             <input class="form-input" id="phone" name="phone" type="tel" placeholder="(239) 000-0000">
           </div>
           <div class="form-group">
-            <label class="form-label" for="service">I'm interested in</label>
-            <select class="form-select" id="service" name="service">
-              <option value="">Select a service...</option>
-              <option value="web-design">Website design</option>
-              <option value="web-management">Website management</option>
-              <option value="seo">Local SEO</option>
-              <option value="listing-media">Listing photography & video</option>
-              <option value="drone">Drone aerial photography</option>
-              <option value="agent-branding">Agent branding</option>
-              <option value="other">Something else</option>
-            </select>
+            <label class="form-label">I'm interested in <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-light)">(select all that apply)</span></label>
+            <div class="form-checks" style="display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;margin-top:6px;">
+              <label class="form-check"><input type="checkbox" name="service[]" value="new-website"> Get a new website</label>
+              <label class="form-check"><input type="checkbox" name="service[]" value="upgrade-website"> Upgrade my website</label>
+              <label class="form-check"><input type="checkbox" name="service[]" value="gbp-management"> GBP Management</label>
+              <label class="form-check"><input type="checkbox" name="service[]" value="social-media"> Social media content</label>
+              <label class="form-check"><input type="checkbox" name="service[]" value="listing-photos"> Listing photography</label>
+              <label class="form-check"><input type="checkbox" name="service[]" value="listing-video"> Listing video</label>
+              <label class="form-check"><input type="checkbox" name="service[]" value="drone"> Drone aerials</label>
+              <label class="form-check"><input type="checkbox" name="service[]" value="agent-branding"> Agent branding</label>
+              <label class="form-check"><input type="checkbox" name="service[]" value="vacation-rental"> Vacation rental photos</label>
+              <label class="form-check"><input type="checkbox" name="service[]" value="other"> Other</label>
+            </div>
           </div>
           <div class="form-group">
             <label class="form-label" for="message">Message</label>
