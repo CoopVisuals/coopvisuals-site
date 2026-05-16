@@ -57,7 +57,7 @@
   nav{position:sticky;top:0;z-index:100;background:var(--green);padding:0 24px;}
   .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
   .nav-logo{display:flex;align-items:center;gap:10px;}
-  .nav-logo img{width:36px;height:36px;border-radius:6px;object-fit:cover;}
+  .nav-logo img{width:36px;height:36px;border-radius:0;object-fit:contain;}
   .nav-logo-text{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--cream);}
   .nav-links{display:flex;align-items:center;gap:6px;}
   .nav-links a{font-size:13px;font-weight:500;color:rgba(245,223,168,0.75);padding:6px 12px;border-radius:var(--radius-pill);transition:color 0.2s,background 0.2s;}
@@ -174,7 +174,7 @@
 <nav aria-label="Main">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Coop Visuals home">
-      <img src="/images/Logo_tan.png" alt="Coop Visuals logo" width="36" height="36">
+      <img src="/images/emblem_tan.png" alt="Coop Visuals" width="36" height="36" style="border-radius:0;object-fit:contain;">
       <span class="nav-logo-text">Coop Visuals</span>
     </a>
     <div class="nav-links">

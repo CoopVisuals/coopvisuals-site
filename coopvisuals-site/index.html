@@ -155,8 +155,8 @@
   .nav-logo img {
     width: 36px;
     height: 36px;
-    border-radius: 6px;
-    object-fit: cover;
+    border-radius: 0;
+    object-fit: contain;
   }
   .nav-logo-text {
     font-family: var(--font-display);
@@ -507,6 +507,37 @@
   .svc-link svg { transition: transform 0.2s; }
   .svc-link:hover svg { transform: translateX(3px); }
 
+  /* ── SERVICES HUB PILLS ── */
+  .hub-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 12px;
+  }
+  .hub-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 48px;
+  }
+  .hub-pill {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: var(--radius-pill);
+    border: 1.5px solid var(--border-strong);
+    color: var(--green-dark);
+    background: var(--white);
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .hub-pill:hover {
+    background: var(--green-pale);
+    border-color: var(--green);
+    color: var(--green-dark);
+  }
+
   /* ── PORTFOLIO ── */
   #work { background: var(--off-white); }
   .work-header {
@@ -685,42 +716,8 @@
   /* ── ABOUT ── */
   #about { background: var(--white); }
   .about-inner {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 64px;
-    align-items: center;
-  }
-  .about-img-wrap {
-    position: relative;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    aspect-ratio: 3/4;
-    background: var(--green-pale);
-  }
-  .about-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-  }
-  .about-accent {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background: var(--green);
-    border-radius: var(--radius);
-    padding: 14px 16px;
-  }
-  .about-accent-text {
-    font-size: 13px;
-    color: var(--cream);
-    font-weight: 500;
-  }
-  .about-accent-sub {
-    font-size: 11px;
-    color: rgba(245,223,168,0.65);
-    margin-top: 2px;
+    max-width: 720px;
+    margin: 0 auto;
   }
   .about-quote {
     font-family: var(--font-display);
@@ -1035,7 +1032,7 @@
     .services-grid { grid-template-columns: 1fr; }
     .work-grid { grid-template-columns: 1fr 1fr; }
     .pricing-grid { grid-template-columns: 1fr; max-width: 360px; }
-    .about-inner { grid-template-columns: 1fr; }
+    /* .about-inner — already single column, no override needed */
     .contact-inner { grid-template-columns: 1fr; }
     .footer-top { flex-direction: column; }
   }
@@ -1250,6 +1247,13 @@
       </div>
       <p class="section-sub">Whether you need a website that converts or media that makes your listings stand out — we handle it all from Fort Myers.</p>
     </div>
+    <div class="hub-eyebrow">For Your Business</div>
+    <div class="hub-pills">
+      <a href="/swfl-small-business/web-design/" class="hub-pill">Get a Website</a>
+      <a href="/swfl-small-business/social-media-content/" class="hub-pill">Social Media Content</a>
+      <a href="/swfl-small-business/gbp-management/" class="hub-pill">GBP Management</a>
+      <a href="/swfl-small-business/upgrade-my-website/" class="hub-pill">Upgrade My Site</a>
+    </div>
     <div class="services-grid">
       <div class="svc-card">
         <span class="svc-division web">Web design</span>
@@ -1284,7 +1288,7 @@
           <li>Schema markup & AEO optimization</li>
           <li>Review strategy & management</li>
         </ul>
-        <a href="/web-design/#seo" class="svc-link">
+        <a href="/swfl-small-business/web-design/#seo" class="svc-link">
           Learn about SEO services
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="#4A7A55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -1300,7 +1304,7 @@
           <li>HDR interior & exterior photography</li>
           <li>Cinematic listing video tours</li>
           <li>Twilight & golden hour shots</li>
-          <li>Luxury films & lifestyle reels</li>
+          <li>Vacation rental photography</li>
           <li>24–48hr delivery guaranteed</li>
         </ul>
         <a href="/real-estate-media/" class="svc-link">
@@ -1318,8 +1322,8 @@
         <ul class="svc-list">
           <li>FAA-licensed aerial photography & video</li>
           <li>Waterfront & luxury specialty</li>
+          <li>Vacation rental photography</li>
           <li>Agent headshots & brand reels</li>
-          <li>Social media content creation</li>
           <li>Vertical reels for Instagram & TikTok</li>
         </ul>
         <a href="/real-estate-media/#drone" class="svc-link">
@@ -1467,28 +1471,17 @@
 <section id="about">
   <div class="container">
     <div class="about-inner">
-      <div>
-        <div class="about-img-wrap">
-          <img src="images/michael-cooper-coop-visuals-fort-myers.webp" alt="Michael Cooper — Coop Visuals founder, Fort Myers web designer and real estate photographer" loading="lazy" width="1080" height="1080">
-          <div class="about-accent">
-            <div class="about-accent-text">Michael Cooper</div>
-            <div class="about-accent-sub">Founder · Fort Myers, FL</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="section-eyebrow">About</div>
-        <h2 class="section-h2">Building the web.<br>Capturing SWFL.</h2>
-        <p class="about-quote">"Adding creativity and style to every project — whether it's a website or a listing video."</p>
-        <p class="about-body">I'm Michael Cooper, the person behind Coop Visuals. Based in Fort Myers, I've spent 7+ years helping SWFL small businesses build their online presence and 6+ years shooting 100+ properties for some of the best real estate agents in Southwest Florida.</p>
-        <p class="about-body">What started as real estate media has grown into a full-service digital agency. I design and manage websites for businesses across Southwest Florida, handle local SEO, and still pick up the camera for listing shoots. Two divisions, one person who genuinely cares about your results.</p>
-        <p class="about-body">Previously operating as WebWorx, Coop Visuals is the unified home for everything I offer — built on years of real-world experience with real SWFL clients.</p>
-        <div class="about-tags">
-          <span class="about-tag">Fort Myers native</span>
-          <span class="about-tag">FAA-licensed pilot</span>
-          <span class="about-tag">5.0 Google rating</span>
-          <span class="about-tag">Formerly WebWorx</span>
-        </div>
+      <div class="section-eyebrow">About</div>
+      <h2 class="section-h2">Building the web.<br>Capturing SWFL.</h2>
+      <p class="about-quote">"Adding creativity and style to every project — whether it's a website or a listing video."</p>
+      <p class="about-body">I'm Michael Cooper, the person behind Coop Visuals. Based in Fort Myers, I've spent 7+ years helping SWFL small businesses build their online presence and 6+ years shooting 100+ properties for some of the best real estate agents in Southwest Florida.</p>
+      <p class="about-body">What started as real estate media has grown into a full-service digital agency. I design and manage websites for businesses across Southwest Florida, handle local SEO, and still pick up the camera for listing shoots. Two divisions, one person who genuinely cares about your results.</p>
+      <p class="about-body">Previously operating as WebWorx, Coop Visuals is the unified home for everything I offer — built on years of real-world experience with real SWFL clients.</p>
+      <div class="about-tags">
+        <span class="about-tag">Fort Myers native</span>
+        <span class="about-tag">FAA-licensed pilot</span>
+        <span class="about-tag">5.0 Google rating</span>
+        <span class="about-tag">Formerly WebWorx</span>
       </div>
     </div>
   </div>
@@ -1701,7 +1694,7 @@
         <p class="footer-tagline">Fort Myers web design & real estate media. Formerly WebWorx.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="#services">Web design</a>
+        <a href="/swfl-small-business/">Web design & business</a>
         <a href="/real-estate-media/">Real estate media</a>
         <a href="#pricing">Pricing</a>
         <a href="/portfolio/">Our work</a>
@@ -1712,7 +1705,7 @@
       </nav>
     </div>
       <div class="footer-social">
-        <a href="https://instagram.com/coop_visuals" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-link">
+        <a href="https://www.instagram.com/coop_visuals/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-link">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           <span>@coop_visuals</span>
         </a>
