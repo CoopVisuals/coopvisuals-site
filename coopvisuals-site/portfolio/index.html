@@ -90,18 +90,22 @@
   .video-section .section-eyebrow::before{background:var(--cream);}
   .video-section .section-h2{color:var(--cream);}
   .video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:48px;}
-  .video-card{position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;background:#1a1a1a;transition:transform 0.25s,box-shadow 0.25s;}
-  .video-card:hover{transform:scale(1.03);box-shadow:0 12px 40px rgba(0,0,0,0.5);}
-  .video-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;}
-  .video-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
-  .video-card:hover .video-thumb img{transform:scale(1.05);}
-  .video-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);transition:background 0.25s;}
-  .video-card:hover .video-play{background:rgba(0,0,0,0.45);}
-  .video-play svg{width:52px;height:52px;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.4));transition:transform 0.2s;}
-  .video-card:hover .video-play svg{transform:scale(1.1);}
+  .video-grid-portrait{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px;}
+  /* Netflix-style video cards */
+  .video-card{position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;background:#0d1a0f;transition:transform 0.25s,box-shadow 0.25s;display:block;text-decoration:none;}
+  .video-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.55);}
+  .video-thumb{position:relative;overflow:hidden;aspect-ratio:16/9;}
+  .video-thumb.portrait{aspect-ratio:9/16;}
+  .video-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s,opacity 0.3s;opacity:0.65;}
+  .video-card:hover .video-thumb img{transform:scale(1.05);opacity:0.8;}
+  .video-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,0.55) 65%,rgba(0,0,0,0.92) 100%);pointer-events:none;transition:background 0.3s;}
+  .video-card:hover .video-thumb::after{background:linear-gradient(180deg,rgba(0,0,0,0) 20%,rgba(0,0,0,0.3) 55%,rgba(0,0,0,0.78) 100%);}
+  .video-play{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;z-index:2;transition:background 0.2s,transform 0.2s,border-color 0.2s;opacity:0.7;}
+  .video-card:hover .video-play{background:rgba(255,255,255,0.22);border-color:rgba(255,255,255,0.5);transform:scale(1.12);opacity:1;}
+  .video-meta{position:absolute;bottom:0;left:0;right:0;padding:28px 14px 14px;z-index:2;}
+  .video-title{font-family:var(--font-display);font-size:15px;font-weight:700;color:#fff;line-height:1.25;margin-bottom:3px;}
+  .video-tag{font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);letter-spacing:0.06em;text-transform:uppercase;}
   .video-info{padding:12px 14px 16px;}
-  .video-tag{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--cream);opacity:0.5;margin-bottom:4px;}
-  .video-title{font-size:14px;font-weight:500;color:#fff;line-height:1.4;}
   .cta-section{background:var(--green);padding:80px 24px;text-align:center;}
   .cta-h2{font-family:var(--font-display);font-size:clamp(28px,3.5vw,44px);font-weight: 700;color:var(--cream);letter-spacing:-0.02em;margin-bottom:16px;}
   .cta-sub{font-size:16px;color:rgba(245,223,168,0.75);line-height:1.7;font-weight:300;margin-bottom:32px;max-width:540px;margin-left:auto;margin-right:auto;}
@@ -325,9 +329,9 @@
       <a class="video-card" href="https://www.youtube.com/watch?v=0LGIWKuqhpA" target="_blank" rel="noopener">
         <div class="video-thumb">
           <img src="https://img.youtube.com/vi/0LGIWKuqhpA/hqdefault.jpg" alt="Cinematic Real Estate Tour | Fort Myers" loading="lazy" width="480" height="360">
-          <div class="video-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="38" fill="rgba(245,223,168,0.15)" stroke="rgba(245,223,168,0.6)" stroke-width="1.5"/><polygon points="32,24 60,40 32,56" fill="#F5DFA8"/></svg></div>
+          <div class="video-play"><svg viewBox="0 0 24 24" width="14" height="14" fill="none"><polygon points="5,3 19,12 5,21" fill="white"/></svg></div>
         </div>
-        <div class="video-info">
+        <div class="video-meta">
           <div class="video-tag">Cinematic Tour</div>
           <div class="video-title">Cinematic Real Estate Tour | Fort Myers</div>
         </div>
@@ -336,31 +340,34 @@
       <a class="video-card" href="https://www.youtube.com/watch?v=6kU58AQHj3w" target="_blank" rel="noopener">
         <div class="video-thumb">
           <img src="https://img.youtube.com/vi/6kU58AQHj3w/hqdefault.jpg" alt="Cinematic Real Estate Tour | Fort Myers" loading="lazy" width="480" height="360">
-          <div class="video-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="38" fill="rgba(245,223,168,0.15)" stroke="rgba(245,223,168,0.6)" stroke-width="1.5"/><polygon points="32,24 60,40 32,56" fill="#F5DFA8"/></svg></div>
+          <div class="video-play"><svg viewBox="0 0 24 24" width="14" height="14" fill="none"><polygon points="5,3 19,12 5,21" fill="white"/></svg></div>
         </div>
-        <div class="video-info">
+        <div class="video-meta">
           <div class="video-tag">Cinematic Tour</div>
           <div class="video-title">Cinematic Real Estate Tour | Fort Myers</div>
         </div>
       </a>
 
+    </div>
+    <div class="video-grid video-grid-portrait">
+
       <a class="video-card" href="https://www.youtube.com/watch?v=hY4qXl7Tmmc" target="_blank" rel="noopener">
-        <div class="video-thumb">
+        <div class="video-thumb portrait">
           <img src="https://img.youtube.com/vi/hY4qXl7Tmmc/hqdefault.jpg" alt="Cinematic Teaser | Fort Myers Shores" loading="lazy" width="480" height="360">
-          <div class="video-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="38" fill="rgba(245,223,168,0.15)" stroke="rgba(245,223,168,0.6)" stroke-width="1.5"/><polygon points="32,24 60,40 32,56" fill="#F5DFA8"/></svg></div>
+          <div class="video-play"><svg viewBox="0 0 24 24" width="14" height="14" fill="none"><polygon points="5,3 19,12 5,21" fill="white"/></svg></div>
         </div>
-        <div class="video-info">
+        <div class="video-meta">
           <div class="video-tag">Cinematic Teaser</div>
           <div class="video-title">Cinematic Teaser | Fort Myers Shores</div>
         </div>
       </a>
 
       <a class="video-card" href="https://www.youtube.com/watch?v=uJB2d4zkrQI" target="_blank" rel="noopener">
-        <div class="video-thumb">
+        <div class="video-thumb portrait">
           <img src="https://img.youtube.com/vi/uJB2d4zkrQI/hqdefault.jpg" alt="Cinematic Teaser | Multiply Sound" loading="lazy" width="480" height="360">
-          <div class="video-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="38" fill="rgba(245,223,168,0.15)" stroke="rgba(245,223,168,0.6)" stroke-width="1.5"/><polygon points="32,24 60,40 32,56" fill="#F5DFA8"/></svg></div>
+          <div class="video-play"><svg viewBox="0 0 24 24" width="14" height="14" fill="none"><polygon points="5,3 19,12 5,21" fill="white"/></svg></div>
         </div>
-        <div class="video-info">
+        <div class="video-meta">
           <div class="video-tag">Cinematic Teaser</div>
           <div class="video-title">Cinematic Teaser | Multiply Sound</div>
         </div>

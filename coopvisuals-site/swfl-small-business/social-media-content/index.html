@@ -109,14 +109,21 @@
   /* Work section — reels */
   .work-section{background:var(--off-white);padding:80px 24px;}
   .reels-row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px;}
-  .reel-embed{border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:9/16;background:#000;max-width:340px;margin:0 auto;}
-  .reel-embed iframe{width:100%;height:100%;border:none;}
   .reel-caption{text-align:center;font-size:13px;color:var(--text-muted);margin-top:12px;font-weight:300;}
-  .reel-link-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;width:100%;height:100%;background:#111;border-radius:inherit;text-decoration:none;transition:background 0.2s;}
-  .reel-link-card:hover{background:#1c1c1c;}
-  .reel-play-btn{width:52px;height:52px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 0.2s;}
-  .reel-link-card:hover .reel-play-btn{transform:scale(1.08);}
-  .reel-watch-label{font-size:12px;font-weight:600;color:rgba(245,223,168,0.75);letter-spacing:0.04em;text-transform:uppercase;font-family:inherit;}
+  /* Netflix-style video cards */
+  .video-card{position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;background:#0d1a0f;transition:transform 0.25s,box-shadow 0.25s;display:block;text-decoration:none;}
+  .video-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.55);}
+  .video-thumb{position:relative;overflow:hidden;aspect-ratio:16/9;}
+  .video-thumb.portrait{aspect-ratio:9/16;}
+  .video-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s,opacity 0.3s;opacity:0.65;}
+  .video-card:hover .video-thumb img{transform:scale(1.05);opacity:0.8;}
+  .video-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,0.55) 65%,rgba(0,0,0,0.92) 100%);pointer-events:none;transition:background 0.3s;}
+  .video-card:hover .video-thumb::after{background:linear-gradient(180deg,rgba(0,0,0,0) 20%,rgba(0,0,0,0.3) 55%,rgba(0,0,0,0.78) 100%);}
+  .video-play{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;z-index:2;transition:background 0.2s,transform 0.2s,border-color 0.2s;opacity:0.7;}
+  .video-card:hover .video-play{background:rgba(255,255,255,0.22);border-color:rgba(255,255,255,0.5);transform:scale(1.12);opacity:1;}
+  .video-meta{position:absolute;bottom:0;left:0;right:0;padding:28px 14px 14px;z-index:2;}
+  .video-title{font-family:var(--font-display);font-size:15px;font-weight:700;color:#fff;line-height:1.25;margin-bottom:3px;}
+  .video-tag{font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);letter-spacing:0.06em;text-transform:uppercase;}
   /* YT embed */
   .yt-section{background:var(--white);padding:80px 24px;}
   .yt-embed{margin-top:40px;border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:16/9;background:#000;max-width:800px;margin-left:auto;margin-right:auto;margin-top:40px;}
@@ -292,23 +299,31 @@
       <h2 class="section-h2" id="reels-h2">Content that makes people stop.</h2>
       <div class="reels-row">
         <div>
-          <div class="reel-embed">
-            <a href="https://www.instagram.com/reel/DU0YW3PEQ-1/" target="_blank" rel="noopener noreferrer" class="reel-link-card" aria-label="Watch reel on Instagram">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(245,223,168,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(245,223,168,0.7)" stroke="none"/></svg>
-              <div class="reel-play-btn"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polygon points="6,3 15,9 6,15" fill="#3A6244"/></svg></div>
-              <span class="reel-watch-label">Watch on Instagram</span>
-            </a>
-          </div>
+          <a class="video-card" href="https://www.instagram.com/reel/DU0YW3PEQ-1/" target="_blank" rel="noopener noreferrer" aria-label="Watch reel on Instagram">
+            <div class="video-thumb portrait" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 40%,#0f3460 70%,#533483 100%);">
+              <div class="video-play" style="top:50%;left:50%;transform:translate(-50%,-50%);opacity:1;width:48px;height:48px;background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.4);position:absolute;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><polygon points="5,3 19,12 5,21" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="video-meta">
+              <div class="video-tag">Instagram Reel</div>
+              <div class="video-title">Watch on Instagram →</div>
+            </div>
+          </a>
           <p class="reel-caption">Behind-the-counter espresso content for @stellacoffeetrailer — SWFL</p>
         </div>
         <div>
-          <div class="reel-embed">
-            <a href="https://www.instagram.com/reel/DVGThpwERvn/" target="_blank" rel="noopener noreferrer" class="reel-link-card" aria-label="Watch reel on Instagram">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(245,223,168,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(245,223,168,0.7)" stroke="none"/></svg>
-              <div class="reel-play-btn"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polygon points="6,3 15,9 6,15" fill="#3A6244"/></svg></div>
-              <span class="reel-watch-label">Watch on Instagram</span>
-            </a>
-          </div>
+          <a class="video-card" href="https://www.instagram.com/reel/DVGThpwERvn/" target="_blank" rel="noopener noreferrer" aria-label="Watch reel on Instagram">
+            <div class="video-thumb portrait" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 40%,#0f3460 70%,#533483 100%);">
+              <div class="video-play" style="top:50%;left:50%;transform:translate(-50%,-50%);opacity:1;width:48px;height:48px;background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.4);position:absolute;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><polygon points="5,3 19,12 5,21" fill="white"/></svg>
+              </div>
+            </div>
+            <div class="video-meta">
+              <div class="video-tag">Instagram Reel</div>
+              <div class="video-title">Watch on Instagram →</div>
+            </div>
+          </a>
           <p class="reel-caption">On location at @buckingham_farms with @stellacoffeetrailer</p>
         </div>
       </div>
