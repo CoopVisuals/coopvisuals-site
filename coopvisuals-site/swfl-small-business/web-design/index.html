@@ -59,8 +59,8 @@
       "description": "Custom website design, SEO optimization, and ongoing monthly management for small businesses in Fort Myers and Southwest Florida.",
       "offers": [
         {"@type":"Offer","name":"Starter Plan","price":"125","priceCurrency":"USD","description":"5-page website, $497 setup fee, monthly management"},
-        {"@type":"Offer","name":"Growth Plan","price":"175","priceCurrency":"USD","description":"8-10 page website with SEO, $797 setup fee"},
-        {"@type":"Offer","name":"Premium Plan","price":"250","priceCurrency":"USD","description":"10+ pages with monthly blog and rank tracking, $1200 setup fee"}
+        {"@type":"Offer","name":"Growth Plan","price":"225","priceCurrency":"USD","description":"8-10 page website with SEO, $797 setup fee"},
+        {"@type":"Offer","name":"Premium Plan","price":"350","priceCurrency":"USD","description":"10+ pages with monthly blog and rank tracking, $1200 setup fee"}
       ]
     },
     {
@@ -69,7 +69,7 @@
         {
           "@type": "Question",
           "name": "How much does web design cost in Fort Myers?",
-          "acceptedAnswer": {"@type": "Answer","text": "A 5-page custom website from Coop Visuals starts at a $497 one-time setup fee plus $125 per month. Larger sites with SEO start at $797 setup plus $175/mo. All plans include hosting, SSL, analytics, and monthly edits with no long-term contracts."}
+          "acceptedAnswer": {"@type": "Answer","text": "A 5-page custom website from Coop Visuals starts at a $497 one-time setup fee plus $125 per month. Larger sites with SEO start at $797 setup plus $225/mo. All plans include hosting, SSL, analytics, and monthly edits with no long-term contracts."}
         },
         {
           "@type": "Question",
@@ -312,11 +312,14 @@
   .footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(245,223,168,0.15); flex-wrap: wrap; }
   .footer-brand-text { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
   .footer-tagline { font-size: 13px; color: rgba(245,223,168,0.5); max-width: 220px; line-height: 1.5; }
-  .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 40px; }
-  .footer-nav a { font-size: 13px; color: rgba(245,223,168,0.55); transition: color 0.2s; }
+  .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 40px; background:transparent;}
+  .footer-nav a { font-size: 13px; color: rgba(245,223,168,0.55); transition: color 0.2s; font-weight:700;}
   .footer-nav a:hover { color: var(--cream); }
+  .footer-social { display: flex; gap: 20px; margin-top: 16px; }
+  .footer-social-link { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: rgba(245,223,168,0.75); transition: color 0.2s; }
+  .footer-social-link:hover { color: var(--cream); }
   .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 8px; }
-  .footer-copy { font-size: 12px; color: rgba(245,223,168,0.6); }
+  .footer-copy { font-size: 12px; color: rgba(245,223,168,0.6); font-weight:700;}
 
   @media (max-width: 900px) {
     .page-hero-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -622,7 +625,7 @@
         <span class="price-badge">Most popular</span>
         <div class="price-name">Growth</div>
         <div class="price-setup">$797 one-time setup · 8–10 pages</div>
-        <div class="price-amount">$175</div>
+        <div class="price-amount">$225</div>
         <div class="price-period">per month</div>
         <div class="price-divider"></div>
         <ul class="price-features">
@@ -638,7 +641,7 @@
       <div class="price-card">
         <div class="price-name">Premium</div>
         <div class="price-setup">$1,200 one-time setup · 10+ pages</div>
-        <div class="price-amount">$250</div>
+        <div class="price-amount">$350</div>
         <div class="price-period">per month</div>
         <div class="price-divider"></div>
         <ul class="price-features">
@@ -711,7 +714,7 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">How much does web design cost in Fort Myers?<span class="faq-icon">+</span></button>
-          <div class="faq-a">A 5-page custom website from Coop Visuals starts at a $497 one-time setup fee plus $125 per month for hosting, SSL, analytics, and monthly edits. Larger sites with SEO start at $797 setup plus $175/mo. There are no long-term contracts — cancel anytime.</div>
+          <div class="faq-a">A 5-page custom website from Coop Visuals starts at a $497 one-time setup fee plus $125 per month for hosting, SSL, analytics, and monthly edits. Larger sites with SEO start at $797 setup plus $225/mo. There are no long-term contracts — cancel anytime.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">What's included in the monthly management fee?<span class="faq-icon">+</span></button>
