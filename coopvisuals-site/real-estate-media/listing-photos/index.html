@@ -80,6 +80,9 @@
   .nav-dropdown-btn.active{color:var(--cream);background:rgba(245,223,168,0.1);}
   .nav-dropdown-chevron{transition:transform 0.2s;flex-shrink:0;}
   .nav-dropdown.open .nav-dropdown-chevron{transform:rotate(180deg);}
+  .nav-dropdown-link{padding:6px 2px 6px 12px;font-size:13px;font-weight:600;color:rgba(245,223,168,0.75);text-decoration:none;transition:color 0.2s;}
+  .nav-dropdown-btn:hover .nav-dropdown-link,.nav-dropdown-btn.active .nav-dropdown-link{color:var(--cream);}
+  .nav-dropdown-chevron-btn{background:none;border:none;cursor:pointer;padding:6px 12px 6px 0;color:inherit;display:flex;align-items:center;font-family:inherit;}
   .nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(-6px);background:#3A6244;border:1px solid rgba(245,223,168,0.18);border-radius:10px;padding:5px;min-width:190px;opacity:0;pointer-events:none;transition:opacity 0.15s ease,transform 0.15s ease;z-index:200;box-shadow:0 8px 24px rgba(0,0,0,0.25);}
   .nav-dropdown.open .nav-dropdown-menu,.nav-dropdown:hover .nav-dropdown-menu{opacity:1;pointer-events:all;transform:translateX(-50%) translateY(0);}
   .nav-dropdown-menu a{display:flex;align-items:center;gap:8px;padding:8px 12px;font-size:13px;font-weight:600;color:rgba(245,223,168,0.8);border-radius:6px;white-space:nowrap;transition:background 0.15s,color 0.15s;}
@@ -222,7 +225,7 @@
     </a>
     <div class="nav-links">
       <div class="nav-dropdown" id="biz-dd">
-        <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">For Your Business <svg class="nav-dropdown-chevron" width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 4 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-dropdown-btn"><a href="/swfl-small-business/" class="nav-dropdown-link">For Your Business</a><button class="nav-dropdown-chevron-btn" aria-haspopup="true" aria-expanded="false" aria-label="Toggle For Your Business menu"><svg class="nav-dropdown-chevron" width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 4 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
         <div class="nav-dropdown-menu" role="menu">
           <a href="/swfl-small-business/web-design/" role="menuitem"><span class="dd-icon">🖥</span> Get a Website</a>
           <a href="/swfl-small-business/social-media-content/" role="menuitem"><span class="dd-icon">📱</span> Social Media Content</a>
@@ -231,7 +234,7 @@
         </div>
       </div>
       <div class="nav-dropdown" id="agents-dd">
-        <button class="nav-dropdown-btn active" aria-haspopup="true" aria-expanded="false">For Agents <svg class="nav-dropdown-chevron" width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 4 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-dropdown-btn active"><a href="/real-estate-media/" class="nav-dropdown-link">For Agents</a><button class="nav-dropdown-chevron-btn" aria-haspopup="true" aria-expanded="false" aria-label="Toggle For Agents menu"><svg class="nav-dropdown-chevron" width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 4 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
         <div class="nav-dropdown-menu" role="menu">
           <a href="/real-estate-media/listing-photos/" class="active" role="menuitem"><span class="dd-icon">📷</span> Listing Photos</a>
           <a href="/real-estate-media/real-estate-video/" role="menuitem"><span class="dd-icon">🎬</span> Real Estate Video</a>
@@ -508,14 +511,14 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 function setupDropdown(id) {
   var dd = document.getElementById(id);
   if (!dd) return;
-  var btn = dd.querySelector('.nav-dropdown-btn');
+  var btn = dd.querySelector('.nav-dropdown-chevron-btn');
   btn.addEventListener('click', function(e) {
     e.stopPropagation();
     var open = dd.classList.toggle('open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     // close other
     document.querySelectorAll('.nav-dropdown.open').forEach(function(el) {
-      if (el !== dd) { el.classList.remove('open'); el.querySelector('.nav-dropdown-btn').setAttribute('aria-expanded','false'); }
+      if (el !== dd) { el.classList.remove('open'); el.querySelector('.nav-dropdown-chevron-btn').setAttribute('aria-expanded','false'); }
     });
   });
 }
@@ -524,14 +527,14 @@ setupDropdown('agents-dd');
 document.addEventListener('click', function() {
   document.querySelectorAll('.nav-dropdown.open').forEach(function(el) {
     el.classList.remove('open');
-    el.querySelector('.nav-dropdown-btn').setAttribute('aria-expanded','false');
+    el.querySelector('.nav-dropdown-chevron-btn').setAttribute('aria-expanded','false');
   });
 });
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     document.querySelectorAll('.nav-dropdown.open').forEach(function(el) {
       el.classList.remove('open');
-      el.querySelector('.nav-dropdown-btn').setAttribute('aria-expanded','false');
+      el.querySelector('.nav-dropdown-chevron-btn').setAttribute('aria-expanded','false');
     });
   }
 });

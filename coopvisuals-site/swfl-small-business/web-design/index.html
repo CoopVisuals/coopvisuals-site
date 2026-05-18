@@ -354,6 +354,9 @@
   .nav-dropdown-btn.active { color: var(--cream); }
   .nav-dropdown-chevron { transition: transform 0.2s; flex-shrink: 0; }
   .nav-dropdown.open .nav-dropdown-chevron { transform: rotate(180deg); }
+  .nav-dropdown-link{padding:6px 2px 6px 12px;font-size:13px;font-weight:600;color:rgba(245,223,168,0.75);text-decoration:none;transition:color 0.2s;}
+  .nav-dropdown-btn:hover .nav-dropdown-link,.nav-dropdown-btn.active .nav-dropdown-link{color:var(--cream);}
+  .nav-dropdown-chevron-btn{background:none;border:none;cursor:pointer;padding:6px 12px 6px 0;color:inherit;display:flex;align-items:center;font-family:inherit;}
   .nav-dropdown-menu {
     position: absolute; top: 100%; margin-top: 0; left: 50%;
     transform: translateX(-50%) translateY(-6px);
@@ -411,7 +414,7 @@
     </a>
     <div class="nav-links">
       <div class="nav-dropdown">
-        <button class="nav-dropdown-btn active" aria-expanded="false" aria-haspopup="true">For Your Business <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-dropdown-btn active"><a href="/swfl-small-business/" class="nav-dropdown-link">For Your Business</a><button class="nav-dropdown-chevron-btn" aria-haspopup="true" aria-expanded="false" aria-label="Toggle For Your Business menu"><svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
         <div class="nav-dropdown-menu" role="menu">
           <a href="/swfl-small-business/web-design/" class="active" role="menuitem">Get a Website</a>
           <a href="/swfl-small-business/social-media-content/" role="menuitem">Social Media Content</a>
@@ -420,7 +423,7 @@
         </div>
       </div>
       <div class="nav-dropdown">
-        <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">For Agents <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav-dropdown-btn"><a href="/real-estate-media/" class="nav-dropdown-link">For Agents</a><button class="nav-dropdown-chevron-btn" aria-haspopup="true" aria-expanded="false" aria-label="Toggle For Agents menu"><svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
         <div class="nav-dropdown-menu" role="menu">
           <a href="/real-estate-media/listing-photos/" role="menuitem">Listing Photos</a>
           <a href="/real-estate-media/real-estate-video/" role="menuitem">Real Estate Video</a>
@@ -836,24 +839,24 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 // Desktop dropdowns
 (function() {
   document.querySelectorAll('.nav-dropdown').forEach(function(dd) {
-    var btn = dd.querySelector('.nav-dropdown-btn');
+    var btn = dd.querySelector('.nav-dropdown-chevron-btn');
     if (!btn) return;
     btn.addEventListener('click', function(e) {
       e.stopPropagation();
       var isOpen = dd.classList.toggle('open');
       btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       document.querySelectorAll('.nav-dropdown').forEach(function(other) {
-        if (other !== dd) { other.classList.remove('open'); var ob = other.querySelector('.nav-dropdown-btn'); if (ob) ob.setAttribute('aria-expanded','false'); }
+        if (other !== dd) { other.classList.remove('open'); var ob = other.querySelector('.nav-dropdown-chevron-btn'); if (ob) ob.setAttribute('aria-expanded','false'); }
       });
     });
   });
   document.addEventListener('click', function() {
     document.querySelectorAll('.nav-dropdown').forEach(function(dd) {
-      dd.classList.remove('open'); var btn = dd.querySelector('.nav-dropdown-btn'); if (btn) btn.setAttribute('aria-expanded','false');
+      dd.classList.remove('open'); var btn = dd.querySelector('.nav-dropdown-chevron-btn'); if (btn) btn.setAttribute('aria-expanded','false');
     });
   });
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') { document.querySelectorAll('.nav-dropdown').forEach(function(dd) { dd.classList.remove('open'); var btn = dd.querySelector('.nav-dropdown-btn'); if (btn) btn.setAttribute('aria-expanded','false'); }); }
+    if (e.key === 'Escape') { document.querySelectorAll('.nav-dropdown').forEach(function(dd) { dd.classList.remove('open'); var btn = dd.querySelector('.nav-dropdown-chevron-btn'); if (btn) btn.setAttribute('aria-expanded','false'); }); }
   });
 })();
 // Mobile sub-panels
