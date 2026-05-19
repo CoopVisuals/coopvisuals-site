@@ -840,8 +840,59 @@
     line-height: 1.55;
     transition: opacity 0.15s;
   }
+  .setup-onboarding {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(245,223,168,0.1);
+  }
+  .setup-onboarding-block {}
+  .setup-onboarding-title {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(245,223,168,0.38);
+    margin-bottom: 8px;
+  }
+  .setup-onboarding-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .setup-onboarding-list li {
+    font-size: 13px;
+    color: rgba(245,223,168,0.65);
+    line-height: 1.45;
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+  }
+  .setup-onboarding-list li::before {
+    content: '→';
+    font-size: 11px;
+    color: rgba(245,223,168,0.35);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .setup-turnaround {
+    font-size: 22px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 4px;
+    transition: opacity 0.15s;
+  }
+  .setup-turnaround-sub {
+    font-size: 12px;
+    color: rgba(245,223,168,0.4);
+  }
   @media (max-width: 640px) {
     .setup-info-grid { grid-template-columns: 1fr; gap: 14px; }
+    .setup-onboarding { grid-template-columns: 1fr; gap: 14px; }
     .setup-tool { padding: 20px 18px 20px; }
   }
 
@@ -1578,6 +1629,21 @@
           <div class="setup-info-text" id="setupExpect">A fast, polished site Google can find and trust. Solid SEO foundation — pairs well with the Starter plan.</div>
         </div>
       </div>
+      <div class="setup-onboarding">
+        <div class="setup-onboarding-block">
+          <div class="setup-onboarding-title">What we need from you</div>
+          <ul class="setup-onboarding-list" id="setupNeeds">
+            <li>Your logo</li>
+            <li>8–10 images</li>
+            <li>2–3 paragraphs about your business — or a 15-min call</li>
+          </ul>
+        </div>
+        <div class="setup-onboarding-block">
+          <div class="setup-onboarding-title">Turnaround</div>
+          <div class="setup-turnaround" id="setupTurnaround">1–2 business days</div>
+          <div class="setup-turnaround-sub">after receiving your assets</div>
+        </div>
+      </div>
     </div>
 
     <div class="pricing-section-label">Monthly plan</div>
@@ -1614,7 +1680,6 @@
         <ul class="price-features">
           <li>Everything in Growth</li>
           <li>2 new SEO pages/month + internal linking</li>
-          <li>1 blog post written per month</li>
           <li>Monthly strategy call</li>
           <li>Active GBP management included</li>
           <li>Semi-annual site review</li>
@@ -1741,7 +1806,7 @@
             What's included in the monthly website management fee?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">Every monthly plan includes site security monitoring, automated backups, a client performance dashboard, and site updates on request. Growth adds monthly SEO page builds and internal linking. Premium adds blog post writing, a monthly strategy call, and active Google Business Profile management. Think of it as having a dedicated web team on retainer — your site is always maintained and improving.</div>
+          <div class="faq-a">Every monthly plan includes site security monitoring, automated backups, a client performance dashboard, and site updates on request. Growth adds monthly SEO page builds and internal linking. Premium doubles the SEO output to 2 pages/month and adds a monthly strategy call and active Google Business Profile management. Think of it as having a dedicated web team on retainer — your site is always maintained and improving.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
@@ -1762,7 +1827,7 @@
             How long does it take to build a website?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">Most 5-page websites are designed, built, and launched within 1–2 weeks of receiving your content and approvals. Larger sites with 8–10+ pages typically take 2–3 weeks. We work fast without cutting corners — and because we manage the site ongoing, the launch is just the beginning.</div>
+          <div class="faq-a">A 5-page website can be live in as little as 1–2 business days after we receive your assets — logo, images, and a few details about your business. Larger 10-page sites take 2–3 business days; 15-page builds take 3–5 business days. We take the heavy lifting off your plate so the timeline is on us, not you.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
@@ -1861,6 +1926,7 @@
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
         <a href="/privacy/">Privacy policy</a>
+        <a href="/terms/">Terms of service</a>
       </nav>
     </div>
       <div class="footer-social">
@@ -1984,19 +2050,25 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       price: '$497',
       bestFor: 'New businesses and service providers ready to establish a clean, professional online presence.',
       pages: 'Home · About · Services · Contact · 1 custom page',
-      expect: 'A fast, polished site Google can find and trust. Solid SEO foundation — pairs well with the Starter plan.'
+      expect: 'A fast, polished site Google can find and trust. Solid SEO foundation — pairs well with the Starter plan.',
+      needs: ['Your logo', '8–10 images', '2–3 paragraphs about your business — or a 15-min call'],
+      turnaround: 'As little as 1–2 business days'
     },
     {
       price: '$797',
       bestFor: 'Growing businesses targeting multiple services or local areas across Southwest Florida.',
       pages: 'Home · About · 3–4 service pages · Location page · Blog · FAQ · Contact · 1 custom page',
-      expect: 'Enough pages to start building real topical authority. Multiple local search entry points — pairs well with the Growth plan.'
+      expect: 'Enough pages to start building real topical authority. Multiple local search entry points — pairs well with the Growth plan.',
+      needs: ['Your logo + branding guidelines', '10–15 high-quality images', '1–2 pages of business details — or a 30–45 min call'],
+      turnaround: '2–3 business days'
     },
     {
       price: '$1,200',
       bestFor: 'Established businesses in competitive markets or targeting multiple service areas.',
       pages: 'Everything in 10 pages, plus service/location combos, portfolio, case studies, and resource pages.',
-      expect: 'Full content architecture from day one. Maximum local search coverage — pairs best with Growth or Premium.'
+      expect: 'Full content architecture from day one. Maximum local search coverage — pairs best with Growth or Premium.',
+      needs: ['Your logo + branding guidelines', '15–20 high-quality images', 'Completed website checklist — or a 60–90 min discovery call'],
+      turnaround: '3–5 business days'
     }
   ];
   var slider = document.getElementById('setupSlider');
@@ -2004,6 +2076,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   var bestForEl = document.getElementById('setupBestFor');
   var pagesEl = document.getElementById('setupPages');
   var expectEl = document.getElementById('setupExpect');
+  var needsEl = document.getElementById('setupNeeds');
+  var turnaroundEl = document.getElementById('setupTurnaround');
   var trackFill = document.getElementById('setupTrackFill');
   var nodes = document.querySelectorAll('.setup-node');
   if (!slider) return;
@@ -2013,6 +2087,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     bestForEl.textContent = d.bestFor;
     pagesEl.textContent = d.pages;
     expectEl.textContent = d.expect;
+    turnaroundEl.textContent = d.turnaround;
+    needsEl.innerHTML = d.needs.map(function(n) { return '<li>' + n + '</li>'; }).join('');
     trackFill.style.width = (index / 2 * 100) + '%';
     nodes.forEach(function(n, i) { n.classList.toggle('active', i <= index); });
   }
