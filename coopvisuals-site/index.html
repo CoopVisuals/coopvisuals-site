@@ -79,7 +79,7 @@
         {
           "@type": "Question",
           "name": "How much does a website cost from Coop Visuals?",
-          "acceptedAnswer": {"@type": "Answer","text": "A 5-page custom website starts at a $497 one-time setup fee plus $125/month for ongoing management, hosting, SSL, and monthly edits. Larger sites and SEO packages are available at higher tiers."}
+          "acceptedAnswer": {"@type": "Answer","text": "A 5-page custom website starts at a $497 one-time setup fee plus $125/month for ongoing management — security monitoring, backups, a client performance dashboard, and site updates. Growth ($225/mo) and Premium ($350/mo) plans add SEO page building, blog writing, and GBP management. No contracts."}}
         }
       ]
     }
@@ -713,6 +713,136 @@
     margin-top: 28px;
     font-size: 13px;
     color: rgba(245,223,168,0.45);
+  }
+  .pricing-section-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(245,223,168,0.45);
+    max-width: 860px;
+    margin-bottom: 12px;
+  }
+  .setup-tool {
+    background: rgba(245,223,168,0.06);
+    border: 1px solid rgba(245,223,168,0.15);
+    border-radius: var(--radius-lg);
+    padding: 28px 28px 24px;
+    max-width: 860px;
+    margin-bottom: 40px;
+  }
+  .setup-tool-top {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .setup-price {
+    font-family: var(--font-display);
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--cream);
+    transition: opacity 0.15s;
+  }
+  .setup-price-sub {
+    font-size: 13px;
+    color: rgba(245,223,168,0.45);
+  }
+  .setup-slider-wrap {
+    position: relative;
+    padding: 8px 0 36px;
+    margin-bottom: 24px;
+  }
+  .setup-track {
+    position: relative;
+    height: 2px;
+    background: rgba(245,223,168,0.15);
+    border-radius: 2px;
+  }
+  .setup-track-fill {
+    position: absolute;
+    left: 0; top: 0;
+    height: 100%;
+    background: var(--cream);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.2s ease;
+  }
+  .setup-nodes {
+    position: absolute;
+    top: 50%;
+    left: 0; right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+  }
+  .setup-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .setup-node-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid rgba(245,223,168,0.25);
+    background: var(--green);
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+    z-index: 1;
+  }
+  .setup-node.active .setup-node-dot {
+    border-color: var(--cream);
+    background: var(--cream);
+  }
+  .setup-node-label {
+    position: absolute;
+    top: 22px;
+    font-size: 12px;
+    color: rgba(245,223,168,0.35);
+    white-space: nowrap;
+    transition: color 0.2s;
+    text-align: center;
+  }
+  .setup-node.active .setup-node-label { color: rgba(245,223,168,0.85); }
+  .setup-slider {
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: calc(100% + 16px);
+    transform: translateY(-50%);
+    opacity: 0;
+    cursor: pointer;
+    height: 44px;
+    margin: 0;
+    z-index: 2;
+  }
+  .setup-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(245,223,168,0.1);
+  }
+  .setup-info-title {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(245,223,168,0.38);
+    margin-bottom: 6px;
+  }
+  .setup-info-text {
+    font-size: 13px;
+    color: rgba(245,223,168,0.65);
+    line-height: 1.55;
+    transition: opacity 0.15s;
+  }
+  @media (max-width: 640px) {
+    .setup-info-grid { grid-template-columns: 1fr; gap: 14px; }
+    .setup-tool { padding: 20px 18px 20px; }
   }
 
   /* ── ABOUT ── */
@@ -1405,50 +1535,89 @@
     <div class="pricing-header">
       <div class="section-eyebrow pricing-eyebrow">Web design pricing</div>
       <h2 class="section-h2 pricing-h2">Transparent pricing.<br>No surprises.</h2>
-      <p class="section-sub pricing-sub">One-time setup fee, then a monthly plan that keeps your site fast, secure, and always improving. No contracts.</p>
+      <p class="section-sub pricing-sub">No contracts. One-time setup to build it right, then a monthly plan to keep it growing.</p>
     </div>
+
+    <div class="pricing-section-label">One-time setup</div>
+    <div class="setup-tool">
+      <div class="setup-tool-top">
+        <span class="setup-price" id="setupPrice">$497</span>
+        <span class="setup-price-sub">one-time</span>
+      </div>
+      <div class="setup-slider-wrap">
+        <div class="setup-track">
+          <div class="setup-track-fill" id="setupTrackFill"></div>
+          <div class="setup-nodes">
+            <div class="setup-node active" data-index="0">
+              <div class="setup-node-dot"></div>
+              <div class="setup-node-label">5 pages</div>
+            </div>
+            <div class="setup-node" data-index="1">
+              <div class="setup-node-dot"></div>
+              <div class="setup-node-label">10 pages</div>
+            </div>
+            <div class="setup-node" data-index="2">
+              <div class="setup-node-dot"></div>
+              <div class="setup-node-label">15 pages</div>
+            </div>
+          </div>
+        </div>
+        <input type="range" min="0" max="2" step="1" value="0" id="setupSlider" class="setup-slider" aria-label="Select number of pages">
+      </div>
+      <div class="setup-info-grid">
+        <div class="setup-info-block">
+          <div class="setup-info-title">Best for</div>
+          <div class="setup-info-text" id="setupBestFor">New businesses and service providers ready to establish a clean, professional online presence.</div>
+        </div>
+        <div class="setup-info-block">
+          <div class="setup-info-title">Typical pages</div>
+          <div class="setup-info-text" id="setupPages">Home · About · Services · Contact · 1 custom page</div>
+        </div>
+        <div class="setup-info-block">
+          <div class="setup-info-title">What to expect</div>
+          <div class="setup-info-text" id="setupExpect">A fast, polished site Google can find and trust. Solid SEO foundation — pairs well with the Starter plan.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-section-label">Monthly plan</div>
     <div class="pricing-grid">
       <div class="price-card">
         <div class="price-name">Starter</div>
-        <div class="price-setup">$497 one-time setup · 5 pages</div>
         <div class="price-amount">$125</div>
         <div class="price-period">per month</div>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li>Custom 5-page website design</li>
-          <li>SSL certificate + hosting</li>
-          <li>Contact form + analytics</li>
-          <li>1 hour of edits per month</li>
-          <li>Monthly performance report</li>
+          <li>Site security monitoring + automated backups</li>
+          <li>Contact form + client performance dashboard</li>
+          <li>Site updates included — request anytime</li>
         </ul>
       </div>
       <div class="price-card featured">
         <span class="price-badge">Most popular</span>
         <div class="price-name">Growth</div>
-        <div class="price-setup">$797 one-time setup · 8–10 pages</div>
         <div class="price-amount">$225</div>
         <div class="price-period">per month</div>
         <div class="price-divider"></div>
         <ul class="price-features">
           <li>Everything in Starter</li>
-          <li>Blog setup & SEO optimization</li>
-          <li>Google Business Profile management</li>
-          <li>Local keyword targeting</li>
-          <li>Quarterly strategy review call</li>
+          <li>1 new SEO page/month + internal linking</li>
+          <li>Annual site review</li>
+          <li>GBP active management add-on (+$75/mo)</li>
         </ul>
       </div>
       <div class="price-card">
         <div class="price-name">Premium</div>
-        <div class="price-setup">$1,200 one-time setup · 10+ pages</div>
         <div class="price-amount">$350</div>
         <div class="price-period">per month</div>
         <div class="price-divider"></div>
         <ul class="price-features">
           <li>Everything in Growth</li>
+          <li>2 new SEO pages/month + internal linking</li>
           <li>1 blog post written per month</li>
-          <li>Monthly rank tracking report</li>
           <li>Monthly strategy call</li>
-          <li>Priority same-day edits</li>
+          <li>Active GBP management included</li>
+          <li>Semi-annual site review</li>
         </ul>
       </div>
     </div>
@@ -1565,14 +1734,14 @@
             How much does a website cost in Fort Myers?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">A 5-page custom website from Coop Visuals starts at a $497 one-time setup fee plus $125 per month for ongoing management, hosting, SSL certificate, and monthly edits. Larger sites and SEO packages are available at the Growth ($225/mo) and Premium ($350/mo) tiers. There are no long-term contracts.</div>
+          <div class="faq-a">A 5-page custom website from Coop Visuals starts at a $497 one-time setup fee, then $125 per month for ongoing management — security monitoring, automated backups, a client performance dashboard, and site updates on request. Larger sites and SEO growth plans are available at the Growth ($225/mo) and Premium ($350/mo) tiers. No long-term contracts.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
             What's included in the monthly website management fee?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">Every monthly plan includes hosting, SSL certificate, security updates, analytics tracking, and a set number of monthly edits. Growth and Premium plans also include SEO optimization, Google Business Profile management, and strategy reviews. Think of it as having a dedicated web team on retainer — your site is always maintained and improving.</div>
+          <div class="faq-a">Every monthly plan includes site security monitoring, automated backups, a client performance dashboard, and site updates on request. Growth adds monthly SEO page builds and internal linking. Premium adds blog post writing, a monthly strategy call, and active Google Business Profile management. Think of it as having a dedicated web team on retainer — your site is always maintained and improving.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
@@ -1807,6 +1976,55 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') { document.querySelectorAll('.nav-dropdown').forEach(function(dd) { dd.classList.remove('open'); var btn = dd.querySelector('.nav-dropdown-chevron-btn'); if (btn) btn.setAttribute('aria-expanded','false'); }); }
   });
+})();
+// Setup fee slider
+(function() {
+  var data = [
+    {
+      price: '$497',
+      bestFor: 'New businesses and service providers ready to establish a clean, professional online presence.',
+      pages: 'Home · About · Services · Contact · 1 custom page',
+      expect: 'A fast, polished site Google can find and trust. Solid SEO foundation — pairs well with the Starter plan.'
+    },
+    {
+      price: '$797',
+      bestFor: 'Growing businesses targeting multiple services or local areas across Southwest Florida.',
+      pages: 'Home · About · 3–4 service pages · Location page · Blog · FAQ · Contact · 1 custom page',
+      expect: 'Enough pages to start building real topical authority. Multiple local search entry points — pairs well with the Growth plan.'
+    },
+    {
+      price: '$1,200',
+      bestFor: 'Established businesses in competitive markets or targeting multiple service areas.',
+      pages: 'Everything in 10 pages, plus service/location combos, portfolio, case studies, and resource pages.',
+      expect: 'Full content architecture from day one. Maximum local search coverage — pairs best with Growth or Premium.'
+    }
+  ];
+  var slider = document.getElementById('setupSlider');
+  var priceEl = document.getElementById('setupPrice');
+  var bestForEl = document.getElementById('setupBestFor');
+  var pagesEl = document.getElementById('setupPages');
+  var expectEl = document.getElementById('setupExpect');
+  var trackFill = document.getElementById('setupTrackFill');
+  var nodes = document.querySelectorAll('.setup-node');
+  if (!slider) return;
+  function update(index) {
+    var d = data[index];
+    priceEl.textContent = d.price;
+    bestForEl.textContent = d.bestFor;
+    pagesEl.textContent = d.pages;
+    expectEl.textContent = d.expect;
+    trackFill.style.width = (index / 2 * 100) + '%';
+    nodes.forEach(function(n, i) { n.classList.toggle('active', i <= index); });
+  }
+  slider.addEventListener('input', function() { update(parseInt(this.value)); });
+  nodes.forEach(function(node) {
+    node.addEventListener('click', function() {
+      var i = parseInt(this.getAttribute('data-index'));
+      slider.value = i;
+      update(i);
+    });
+  });
+  update(0);
 })();
 // Mobile sub-panels
 (function() {
