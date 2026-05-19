@@ -251,6 +251,31 @@
   .pricing-sub { color: rgba(245,223,168,0.7); }
   .pricing-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
   .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .pricing-section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(245,223,168,0.45); max-width: 860px; margin-bottom: 12px; }
+  .setup-tool { background: rgba(245,223,168,0.06); border: 1px solid rgba(245,223,168,0.15); border-radius: var(--radius-lg); padding: 28px 28px 24px; max-width: 860px; margin-bottom: 40px; }
+  .setup-tool-top { display: flex; align-items: baseline; gap: 10px; margin-bottom: 28px; }
+  .setup-price { font-family: var(--font-display); font-size: 38px; font-weight: 700; color: var(--cream); transition: opacity 0.15s; }
+  .setup-price-sub { font-size: 13px; color: rgba(245,223,168,0.45); }
+  .setup-slider-wrap { position: relative; padding: 8px 0 36px; margin-bottom: 24px; }
+  .setup-track { position: relative; height: 2px; background: rgba(245,223,168,0.15); border-radius: 2px; }
+  .setup-track-fill { position: absolute; left: 0; top: 0; height: 100%; background: var(--cream); border-radius: 2px; width: 0%; transition: width 0.2s ease; }
+  .setup-nodes { position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; justify-content: space-between; }
+  .setup-node { display: flex; flex-direction: column; align-items: center; position: relative; cursor: pointer; }
+  .setup-node-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid rgba(245,223,168,0.25); background: var(--green); transition: border-color 0.2s, background 0.2s; position: relative; z-index: 1; }
+  .setup-node.active .setup-node-dot { border-color: var(--cream); background: var(--cream); }
+  .setup-node-label { position: absolute; top: 22px; font-size: 12px; color: rgba(245,223,168,0.35); white-space: nowrap; transition: color 0.2s; text-align: center; }
+  .setup-node.active .setup-node-label { color: rgba(245,223,168,0.85); }
+  .setup-slider { position: absolute; top: 50%; left: -8px; width: calc(100% + 16px); transform: translateY(-50%); opacity: 0; cursor: pointer; height: 44px; margin: 0; z-index: 2; }
+  .setup-info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-top: 20px; border-top: 1px solid rgba(245,223,168,0.1); }
+  .setup-info-title { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(245,223,168,0.38); margin-bottom: 6px; }
+  .setup-info-text { font-size: 13px; color: rgba(245,223,168,0.65); line-height: 1.55; transition: opacity 0.15s; }
+  .setup-onboarding { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-top: 20px; margin-top: 20px; border-top: 1px solid rgba(245,223,168,0.1); }
+  .setup-onboarding-title { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(245,223,168,0.38); margin-bottom: 8px; }
+  .setup-onboarding-list { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+  .setup-onboarding-list li { font-size: 13px; color: rgba(245,223,168,0.65); line-height: 1.45; display: flex; align-items: flex-start; gap: 7px; }
+  .setup-onboarding-list li::before { content: '→'; font-size: 11px; color: rgba(245,223,168,0.35); flex-shrink: 0; margin-top: 1px; }
+  .setup-turnaround { font-size: 22px; font-family: var(--font-display); font-weight: 700; color: var(--cream); margin-bottom: 4px; transition: opacity 0.15s; }
+  .setup-turnaround-sub { font-size: 12px; color: rgba(245,223,168,0.4); }
   .price-card { background: rgba(245,223,168,0.08); border: 1px solid rgba(245,223,168,0.2); border-radius: var(--radius-lg); padding: 28px 24px; transition: background 0.2s; }
   .price-card:hover { background: rgba(245,223,168,0.12); }
   .price-card.featured { background: var(--cream); border-color: var(--cream); }
@@ -326,6 +351,9 @@
     .process-grid { grid-template-columns: repeat(2, 1fr); }
     .svc-row { grid-template-columns: 1fr; gap: 20px; }
     .pricing-grid { grid-template-columns: 1fr; max-width: 380px; }
+    .setup-info-grid { grid-template-columns: 1fr; gap: 14px; }
+    .setup-onboarding { grid-template-columns: 1fr; gap: 14px; }
+    .setup-tool { padding: 20px 18px; }
     .city-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 768px) {
@@ -604,13 +632,71 @@
       <div>
         <div class="section-eyebrow pricing-eyebrow">Pricing</div>
         <h2 class="section-h2 pricing-h2">Simple, transparent pricing.</h2>
-        <p class="section-sub pricing-sub">One setup fee, then a monthly plan. No hidden costs, no long contracts.</p>
+        <p class="section-sub pricing-sub">No contracts. One-time setup to build it right, then a monthly plan to keep it growing.</p>
       </div>
     </div>
+
+    <div class="pricing-section-label">One-time setup</div>
+    <div class="setup-tool">
+      <div class="setup-tool-top">
+        <span class="setup-price" id="wd-setupPrice">$497</span>
+        <span class="setup-price-sub">one-time</span>
+      </div>
+      <div class="setup-slider-wrap">
+        <div class="setup-track">
+          <div class="setup-track-fill" id="wd-setupTrackFill"></div>
+          <div class="setup-nodes">
+            <div class="setup-node active" data-index="0">
+              <div class="setup-node-dot"></div>
+              <div class="setup-node-label">5 pages</div>
+            </div>
+            <div class="setup-node" data-index="1">
+              <div class="setup-node-dot"></div>
+              <div class="setup-node-label">10 pages</div>
+            </div>
+            <div class="setup-node" data-index="2">
+              <div class="setup-node-dot"></div>
+              <div class="setup-node-label">15 pages</div>
+            </div>
+          </div>
+        </div>
+        <input type="range" min="0" max="2" step="1" value="0" id="wd-setupSlider" class="setup-slider" aria-label="Select number of pages">
+      </div>
+      <div class="setup-info-grid">
+        <div class="setup-info-block">
+          <div class="setup-info-title">Best for</div>
+          <div class="setup-info-text" id="wd-setupBestFor">New businesses and service providers ready to establish a clean, professional online presence.</div>
+        </div>
+        <div class="setup-info-block">
+          <div class="setup-info-title">Typical pages</div>
+          <div class="setup-info-text" id="wd-setupPages">Home · About · Services · Contact · 1 custom page</div>
+        </div>
+        <div class="setup-info-block">
+          <div class="setup-info-title">What to expect</div>
+          <div class="setup-info-text" id="wd-setupExpect">A fast, polished site Google can find and trust. Solid SEO foundation — pairs well with the Starter plan.</div>
+        </div>
+      </div>
+      <div class="setup-onboarding">
+        <div class="setup-onboarding-block">
+          <div class="setup-onboarding-title">What we need from you</div>
+          <ul class="setup-onboarding-list" id="wd-setupNeeds">
+            <li>Your logo</li>
+            <li>8–10 images</li>
+            <li>2–3 paragraphs about your business — or a 15-min call</li>
+          </ul>
+        </div>
+        <div class="setup-onboarding-block">
+          <div class="setup-onboarding-title">Turnaround</div>
+          <div class="setup-turnaround" id="wd-setupTurnaround">As little as 1–2 business days</div>
+          <div class="setup-turnaround-sub">after receiving your assets</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-section-label">Monthly plan</div>
     <div class="pricing-grid">
       <div class="price-card">
         <div class="price-name">Starter</div>
-        <div class="price-setup">$497 one-time setup · 5 pages</div>
         <div class="price-amount">$125</div>
         <div class="price-period">per month</div>
         <div class="price-divider"></div>
@@ -624,7 +710,6 @@
       <div class="price-card featured">
         <span class="price-badge">Most popular</span>
         <div class="price-name">Growth</div>
-        <div class="price-setup">$797 one-time setup · 10 pages</div>
         <div class="price-amount">$225</div>
         <div class="price-period">per month</div>
         <div class="price-divider"></div>
@@ -638,7 +723,6 @@
       </div>
       <div class="price-card">
         <div class="price-name">Premium</div>
-        <div class="price-setup">$1,200 one-time setup · 15 pages</div>
         <div class="price-amount">$350</div>
         <div class="price-period">per month</div>
         <div class="price-divider"></div>
@@ -652,6 +736,7 @@
         <a href="/#contact" class="price-btn">Get started</a>
       </div>
     </div>
+    <p class="pricing-note" style="margin-top:28px;font-size:13px;color:rgba(245,223,168,0.45);">Real estate media is priced separately. <a href="/#contact" style="color:var(--cream);text-decoration:underline;">Contact us</a> for a custom media quote.</p>
   </div>
 </section>
 
@@ -831,6 +916,65 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 })();
 </script>
 <script>
+// Setup fee slider
+(function() {
+  var data = [
+    {
+      price: '$497',
+      bestFor: 'New businesses and service providers ready to establish a clean, professional online presence.',
+      pages: 'Home · About · Services · Contact · 1 custom page',
+      expect: 'A fast, polished site Google can find and trust. Solid SEO foundation — pairs well with the Starter plan.',
+      needs: ['Your logo', '8–10 images', '2–3 paragraphs about your business — or a 15-min call'],
+      turnaround: 'As little as 1–2 business days'
+    },
+    {
+      price: '$797',
+      bestFor: 'Growing businesses targeting multiple services or local areas across Southwest Florida.',
+      pages: 'Home · About · 3–4 service pages · Location page · Blog · FAQ · Contact · 1 custom page',
+      expect: 'Enough pages to start building real topical authority. Multiple local search entry points — pairs well with the Growth plan.',
+      needs: ['Your logo + branding guidelines', '10–15 high-quality images', '1–2 pages of business details — or a 30–45 min call'],
+      turnaround: '2–3 business days'
+    },
+    {
+      price: '$1,200',
+      bestFor: 'Established businesses in competitive markets or targeting multiple service areas.',
+      pages: 'Everything in 10 pages, plus service/location combos, portfolio, case studies, and resource pages.',
+      expect: 'Full content architecture from day one. Maximum local search coverage — pairs best with Growth or Premium.',
+      needs: ['Your logo + branding guidelines', '15–20 high-quality images', 'Completed website checklist — or a 60–90 min discovery call'],
+      turnaround: '3–5 business days'
+    }
+  ];
+  var slider = document.getElementById('wd-setupSlider');
+  if (!slider) return;
+  var priceEl      = document.getElementById('wd-setupPrice');
+  var bestForEl    = document.getElementById('wd-setupBestFor');
+  var pagesEl      = document.getElementById('wd-setupPages');
+  var expectEl     = document.getElementById('wd-setupExpect');
+  var needsEl      = document.getElementById('wd-setupNeeds');
+  var turnaroundEl = document.getElementById('wd-setupTurnaround');
+  var trackFill    = document.getElementById('wd-setupTrackFill');
+  var nodes        = document.querySelectorAll('#pricing .setup-node');
+  function update(index) {
+    var d = data[index];
+    priceEl.textContent      = d.price;
+    bestForEl.textContent    = d.bestFor;
+    pagesEl.textContent      = d.pages;
+    expectEl.textContent     = d.expect;
+    turnaroundEl.textContent = d.turnaround;
+    needsEl.innerHTML        = d.needs.map(function(n) { return '<li>' + n + '</li>'; }).join('');
+    trackFill.style.width    = (index / 2 * 100) + '%';
+    nodes.forEach(function(n, i) { n.classList.toggle('active', i <= index); });
+  }
+  slider.addEventListener('input', function() { update(parseInt(this.value)); });
+  nodes.forEach(function(node) {
+    node.addEventListener('click', function() {
+      var i = parseInt(this.getAttribute('data-index'));
+      slider.value = i;
+      update(i);
+    });
+  });
+  update(0);
+})();
 // Desktop dropdowns
 (function() {
   document.querySelectorAll('.nav-dropdown').forEach(function(dd) {
